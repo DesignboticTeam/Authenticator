@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>net472; net8.0-windows</TargetFrameworks>
+	  <LangVersion>12</LangVersion>    
+	  <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Connector\Connector\Connector.csproj" />
+    <ProjectReference Include="..\..\UI_WPF\UI_WPF\UI_WPF.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Modals\Login\ModalLogin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Modals\Login\ModalLoginLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Modals\PasswordChanged\ModalPasswordChanged.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Modals\Registered\ModalRegistered.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Modals\Register\ModalRegister.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>

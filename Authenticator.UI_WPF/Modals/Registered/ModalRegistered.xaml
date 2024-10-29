@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="NextDesignerWPF.Views.ModalRegistered"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NextDesignerWPF.Views"
+      mc:Ignorable="d"
+      d:DesignHeight="450" 
+      d:DesignWidth="700"
+             
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:components="clr-namespace:NextDesignerWPF.Components"
+
+      xmlns:m ="clr-namespace:NextDesignerWPF.Localization"
+      xmlns:lex="http://wpflocalizeextension.codeplex.com"
+      lex:LocalizeDictionary.DesignCulture="de"
+      lex:ResxLocalizationProvider.DefaultAssembly="NextDesignerWPF"
+      lex:ResxLocalizationProvider.DefaultDictionary="Resource"
+      Background="{StaticResource NextDesignerBackgroundPrimaryColor}"            
+      >
+    <!--  TODO for revit load minimal resources to avoid lagg on loading
+        <UserControl.Resources>
+        <ResourceDictionary Source="pack://application:,,,/NextDesignerWPF;component/Resources.xaml" />
+    </UserControl.Resources>
+    -->
+    <components:ModalLoginLayout
+                ModalSubTitle="{lex:Loc {Binding SubTitleKey}}"                           
+                ModalTitle="{lex:Loc {Binding TitleKey}}"                           
+                IconPath="{Binding IconPath}">
+        
+        <!-- Login content -->
+        <StackPanel>
+
+            <TextBlock 
+                Width="250"
+                    Style="{StaticResource InputTextBlockBase}"
+                    TextWrapping="Wrap"
+                    TextAlignment="Center"
+                    Text="{lex:Loc {m:DisplayName ModalRegistered, DisplayType=CheckEmailText}}"></TextBlock>
+            <Button 
+                    Style="{StaticResource InputButtonBase}"
+                    Content="{lex:Loc {m:DisplayName ModalRegistered, DisplayType=ButtonGoBackToLogin}}"
+                    Command="{Binding GoToLoginCommand}" 
+                    ></Button>
+
+            <Grid Margin="0,60,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="{lex:Loc {m:DisplayName ModalRegistered, DisplayType=NoEmailRevicedText}}" TextWrapping="Wrap" Margin="0,0,30,0"></TextBlock>
+                <Button Grid.Column="1"
+                        Style="{StaticResource InputButtonBase}"
+                        Content="{lex:Loc {m:DisplayName ModalRegistered, DisplayType=ButtonSendAgain}}"
+                        Command="{Binding ResendChangeVerificationCommand}" 
+                    ></Button>
+            </Grid>
+
+            <TextBlock Text="{Binding Status}"></TextBlock>
+                    
+        </StackPanel>
+    </components:ModalLoginLayout>
+
+</UserControl>
