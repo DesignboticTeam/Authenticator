@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NextDesignerWPF.Views
+namespace Authenticator.Components
 {
     /// <summary>
     /// Interaction logic for ModalLogin.xaml

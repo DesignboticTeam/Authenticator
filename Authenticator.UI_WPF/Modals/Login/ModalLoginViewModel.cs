@@ -9,7 +9,7 @@ using UI_WPF.ViewModel;
 using UI_WPF.Services;
 using UI_WPF.Containers;
 
-namespace NextDesignerWPF.ViewModel
+namespace Authenticator.Components
 {
 
     public partial class ModalLoginViewModel : ViewModelBase

@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace NextDesignerWPF.Components
+namespace Authenticator.Components
 {
     /// <summary>
     /// Interaction logic for PageLayout.xaml
