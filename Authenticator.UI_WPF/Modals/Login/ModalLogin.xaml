@@ -80,7 +80,8 @@
     </local:ModalLoginLayout>
 
     <!--
-        <materialDesign:PackIcon Kind="Tick" Visibility="{Binding User.IsAuthenticated, Converter={StaticResource BooleanToVisibilityConverter}}">
+        <materialDesign:Pack
+    Kind="Tick" Visibility="{Binding User.IsAuthenticated, Converter={StaticResource BooleanToVisibilityConverter}}">
         </materialDesign:PackIcon>
         <materialDesign:PackIcon Kind="No" Visibility="{Binding User.IsAuthenticated, Converter={StaticResource InverseBooleanToVisibilityConverter}}">
         </materialDesign:PackIcon>
