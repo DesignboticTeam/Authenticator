@@ -15,20 +15,18 @@
       xmlns:lex="http://wpflocalizeextension.codeplex.com"
       lex:LocalizeDictionary.DesignCulture="de"
       lex:ResxLocalizationProvider.DefaultAssembly="NextDesignerWPF"
-      lex:ResxLocalizationProvider.DefaultDictionary="Resource"
-      Background="{StaticResource NextDesignerBackgroundPrimaryColor}"
-             
+      lex:ResxLocalizationProvider.DefaultDictionary="Resource"             
       >
     <!--  TODO for revit load minimal resources to avoid lagg on loading
         <UserControl.Resources>
         <ResourceDictionary Source="pack://application:,,,/NextDesignerWPF;component/Resources.xaml" />
     </UserControl.Resources>
     -->
+
     <local:ModalLoginLayout
                 ModalSubTitle="{lex:Loc {Binding SubTitleKey}}"                           
                 ModalTitle="{lex:Loc {Binding TitleKey}}"                           
                 IconPath="{Binding IconPath}">
-        <!-- Login content -->
         <StackPanel>
             <components:TextBoxWithPreview Margin="0,10,0,0" TextValue="{Binding User.Name}"/>
             <components:TextBoxWithPreview Margin="0,10,0,0" TextValue="{Binding User.LastName}"/>

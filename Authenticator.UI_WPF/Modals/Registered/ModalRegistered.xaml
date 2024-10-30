@@ -7,7 +7,7 @@
       mc:Ignorable="d"
       d:DesignHeight="450" 
       d:DesignWidth="700"
-                   xmlns:local="clr-namespace:Authenticator.Components"
+      xmlns:local="clr-namespace:Authenticator.Components"
 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
 
@@ -16,19 +16,18 @@
       lex:LocalizeDictionary.DesignCulture="de"
       lex:ResxLocalizationProvider.DefaultAssembly="NextDesignerWPF"
       lex:ResxLocalizationProvider.DefaultDictionary="Resource"
-      Background="{StaticResource NextDesignerBackgroundPrimaryColor}"            
       >
     <!--  TODO for revit load minimal resources to avoid lagg on loading
         <UserControl.Resources>
         <ResourceDictionary Source="pack://application:,,,/NextDesignerWPF;component/Resources.xaml" />
     </UserControl.Resources>
     -->
+
     <local:ModalLoginLayout
                 ModalSubTitle="{lex:Loc {Binding SubTitleKey}}"                           
                 ModalTitle="{lex:Loc {Binding TitleKey}}"                           
                 IconPath="{Binding IconPath}">
-        
-        <!-- Login content -->
+
         <StackPanel>
 
             <TextBlock 
@@ -58,7 +57,7 @@
             </Grid>
 
             <TextBlock Text="{Binding Status}"></TextBlock>
-                    
+
         </StackPanel>
     </local:ModalLoginLayout>
 
