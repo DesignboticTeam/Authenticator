@@ -59,12 +59,12 @@ namespace Authenticator
                     var mapper = new ViewModelToViewMapper();
                     
                     mapper.RegisterMapping<MainPageViewModel, MainPage>();
-                    mapper.RegisterMapping<AuthenticatorMainPage, AuthenticatorMainPageViewModel>();
+                    mapper.RegisterMapping<AuthenticatorMainPageViewModel, AuthenticatorMainPage>();
 
                     mapper.RegisterMapping<ModalLoginViewModel, ModalLogin>();
-                    mapper.RegisterMapping<ModalPasswordChanged, ModalPasswordChanged>();
-                    mapper.RegisterMapping<ModalRegister, ModalRegisterViewModel>();
-                    mapper.RegisterMapping<ModalRegistered, ModalRegisteredViewModel>();
+                    mapper.RegisterMapping<ModalPasswordChangedViewModel, ModalPasswordChanged>();
+                    mapper.RegisterMapping<ModalRegisterViewModel, ModalRegister>();
+                    mapper.RegisterMapping<ModalRegisteredViewModel, ModalRegistered>();
 
                     services.AddSingleton<IViewModelToViewMapper>(mapper);
                 });
