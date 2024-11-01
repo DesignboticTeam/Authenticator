@@ -11,6 +11,7 @@ using System.Reflection;
 
 //using System.Runtime.InteropServices.JavaScript;
 using System.Windows;
+using UI_WPF.Components;
 using UI_WPF.Factories;
 using UI_WPF.Interfaces;
 using UI_WPF.Services;
@@ -45,8 +46,13 @@ namespace Authenticator
                     services.AddSingleton<MainPage>();
                     services.AddSingleton<MainPageViewModel>();
                     services.AddSingleton<ViewModelFactory>();
+
+                    //Nav structure init
+                    services.AddSingleton<PageDataTempleSelector>();
                     var mapper = new ViewModelToViewMapper();
                     mapper.RegisterMapping<MainPageViewModel, MainPage>();
+                    services.AddSingleton<IViewModelToViewMapper>(mapper);
+
                 });
 
             try {
@@ -80,14 +86,17 @@ namespace Authenticator
             
             var mainPage = AppHost.Services.GetRequiredService<MainPage>();
             var mainPageViewModel = AppHost.Services.GetRequiredService<MainPageViewModel>();
+            mainWindow.Show();
             mainWindow.Content = mainPage;
             mainWindow.DataContext = mainPageViewModel;
 
-         //   var initialNavigation = AppHost.Services.GetRequiredService<INavigationService>();
+         //   var pageNavigation = AppHost.Services.GetRequiredService<INavigationService>();
+         //   pageNavigation.NavigateTo<MainPageViewModel>();
+
+            //   var initialNavigation = AppHost.Services.GetRequiredService<INavigationService>();
             var modalNavigation = AppHost.Services.GetRequiredService<NavigationModalService>();
             modalNavigation.NavigateTo<ModalLoginViewModel>();
 
-            mainWindow.Show();
             /*
             initialNavigation.NavigateTo<InputViewModel>();
 

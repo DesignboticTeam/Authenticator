@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UI_WPF.Components;
 
 namespace Authenticator.UI_WPF
 {
@@ -20,9 +21,19 @@ namespace Authenticator.UI_WPF
     /// </summary>
     public partial class MainPage : UserControl
     {
+        PageDataTempleSelector _pageSelector;
+        /*
         public MainPage()
         {
             InitializeComponent();
+            MainContent.ContentTemplateSelector = _pageSelector;
+        }
+        */
+        public MainPage(PageDataTempleSelector pageSelector)
+        {
+            InitializeComponent();
+            _pageSelector = pageSelector;  
+            MainContent.ContentTemplateSelector = pageSelector;
         }
     }
 }

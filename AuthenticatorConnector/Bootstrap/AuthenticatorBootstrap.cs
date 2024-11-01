@@ -46,6 +46,8 @@ namespace AuthenticatorConnector.Bootstrap
                     services.TryAddSingleton<IMessagePrompter, MessagePrompter>();
                     services.TryAddSingleton<IExceptionHandler, UserExceptionHandler>();
 
+                    services.TryAddSingleton<IDataService, FileService>();
+
                     services.TryAddSingleton<IWebService, WebConnectorService>();
                     services.AddSingleton<IAuthenticationService, FirebaseAuthenticationService>();
                 });

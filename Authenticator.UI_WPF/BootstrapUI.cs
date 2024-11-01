@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UI_WPF.Containers;
+using UI_WPF.Factories;
+using UI_WPF.Interfaces;
 using UI_WPF.Services;
 
 namespace Authenticator.UI_WPF
@@ -24,12 +26,15 @@ namespace Authenticator.UI_WPF
                 services.AddSingleton<ModalContainer>();
             }
 
-            if (!services.Any(x => x.GetType() == typeof(NavigationService)))
+            if (!services.Any(x => x.GetType() == typeof(INavigationService)))
             {
-                services.AddSingleton<NavigationService>();
+                services.AddSingleton<INavigationService, NavigationService>();
             }
-
-            if (!services.Any(x => x.GetType() == typeof(PageContainer)))
+            if (!services.Any(x => x.GetType() == typeof(INavigationService)))
+            {
+                services.AddSingleton<PageViewModelFactory>();
+            }
+            if (!services.Any(x => x.GetType() == typeof(PageViewModelFactory)))
             {
                 services.AddSingleton<PageContainer>();
             }

@@ -24,12 +24,18 @@
     </UserControl.Resources>
 
     <Grid>
-        <ContentControl 
-            Grid.Row ="2"
-            Grid.Column="1"
-            Name="MainContent"
-            Content="{Binding CurrentPageViewModel}"
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" Text="Main Page"></TextBlock>
+            <ContentControl Panel.ZIndex="1"
+                        Visibility= "{Binding IsModalOpen, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                        Content= "{Binding CurrentModalViewModel}" />
+            
+            <ContentControl 
+                Name="MainContent"
+                Content="{Binding CurrentPageViewModel}"
             >
-        </ContentControl>
+            </ContentControl>
+        </StackPanel>
+
     </Grid>
 </UserControl>
