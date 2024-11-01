@@ -2,6 +2,7 @@
 using Authenticator.UI_WPF;
 using AuthenticatorConnector.Bootstrap;
 using Connector.Bootstraper;
+using Connector.Interfaces;
 using MahApps.Metro.Controls.Dialogs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -12,6 +13,7 @@ using System.Reflection;
 //using System.Runtime.InteropServices.JavaScript;
 using System.Windows;
 using UI_WPF.Components;
+using UI_WPF.Containers;
 using UI_WPF.Factories;
 using UI_WPF.Interfaces;
 using UI_WPF.Services;
@@ -44,15 +46,27 @@ namespace Authenticator
                     //TODO move to UI boot
                     services.AddSingleton<MainWindow>();
                     services.AddSingleton<MainPage>();
+
                     services.AddSingleton<MainPageViewModel>();
+
+                    services.AddTransient<AuthenticatorMainPage>();
+                    services.AddTransient<AuthenticatorMainPageViewModel>();
+
                     services.AddSingleton<ViewModelFactory>();
 
                     //Nav structure init
                     services.AddSingleton<PageDataTempleSelector>();
                     var mapper = new ViewModelToViewMapper();
+                    
                     mapper.RegisterMapping<MainPageViewModel, MainPage>();
-                    services.AddSingleton<IViewModelToViewMapper>(mapper);
+                    mapper.RegisterMapping<AuthenticatorMainPage, AuthenticatorMainPageViewModel>();
 
+                    mapper.RegisterMapping<ModalLoginViewModel, ModalLogin>();
+                    mapper.RegisterMapping<ModalPasswordChanged, ModalPasswordChanged>();
+                    mapper.RegisterMapping<ModalRegister, ModalRegisterViewModel>();
+                    mapper.RegisterMapping<ModalRegistered, ModalRegisteredViewModel>();
+
+                    services.AddSingleton<IViewModelToViewMapper>(mapper);
                 });
 
             try {
@@ -81,25 +95,33 @@ namespace Authenticator
             logger.LogInformation("Host started");
             logger.LogWarning("Host started");
 
+            var authenticationService = AppHost.Services.GetRequiredService<IAuthenticationService>();
+            await authenticationService.Configure();
 
             var mainWindow = AppHost.Services.GetRequiredService<MainWindow>();
             
-            var mainPage = AppHost.Services.GetRequiredService<MainPage>();
+            var mainPage = AppHost.Services.GetRequiredService<MainPage>(); 
             var mainPageViewModel = AppHost.Services.GetRequiredService<MainPageViewModel>();
+
+            var pages = AppHost.Services.GetRequiredService<PageContainer>();
+            pages.CurrentViewModel = AppHost.Services.GetRequiredService<AuthenticatorMainPageViewModel>();
+
             mainWindow.Show();
             mainWindow.Content = mainPage;
             mainWindow.DataContext = mainPageViewModel;
 
-         //   var pageNavigation = AppHost.Services.GetRequiredService<INavigationService>();
-         //   pageNavigation.NavigateTo<MainPageViewModel>();
+            var pageNavigation = AppHost.Services.GetRequiredService<INavigationService>();
 
-            //   var initialNavigation = AppHost.Services.GetRequiredService<INavigationService>();
             var modalNavigation = AppHost.Services.GetRequiredService<NavigationModalService>();
             modalNavigation.NavigateTo<ModalLoginViewModel>();
 
-            /*
-            initialNavigation.NavigateTo<InputViewModel>();
+            pageNavigation.NavigateTo<AuthenticatorMainPageViewModel>();
 
+
+            // var initialNavigation = AppHost.Services.GetRequiredService<INavigationService>();
+            //initialNavigation.NavigateTo<ModalLoginViewModel>();
+
+            /*
             //TODO make general runnig procedure based on config
             var projectService = AppHost.Services.GetRequiredService<IProjectService<AnalyzerProject>>();
             await projectService.CreateProject();

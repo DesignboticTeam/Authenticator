@@ -26,15 +26,22 @@
     <Grid>
         <StackPanel>
             <TextBlock HorizontalAlignment="Center" Text="Main Page"></TextBlock>
-            <ContentControl Panel.ZIndex="1"
-                        Visibility= "{Binding IsModalOpen, Converter={StaticResource BooleanToVisibilityConverter}}" 
-                        Content= "{Binding CurrentModalViewModel}" />
-            
+            <Button Content="Login" Command="{Binding LoginCommand}"></Button>
+
+
+            <TextBlock HorizontalAlignment="Center" Text="MainContent"></TextBlock>
             <ContentControl 
                 Name="MainContent"
                 Content="{Binding CurrentPageViewModel}"
             >
             </ContentControl>
+
+            <TextBlock HorizontalAlignment="Center" Text="ModalContent"></TextBlock>
+            <ContentControl Panel.ZIndex="1"
+                        Name="MainModalContent"
+                        Visibility= "{Binding IsModalOpen, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                        Content= "{Binding CurrentModalViewModel}" />
+            
         </StackPanel>
 
     </Grid>
