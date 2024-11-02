@@ -13,8 +13,8 @@
 
       xmlns:m ="clr-namespace:UI_WPF.Localization;assembly=UI_WPF"             
       xmlns:lex="http://wpflocalizeextension.codeplex.com"
-      lex:LocalizeDictionary.DesignCulture="de"
-      lex:ResxLocalizationProvider.DefaultAssembly="NextDesignerWPF"
+      lex:LocalizeDictionary.DesignCulture="en"
+      lex:ResxLocalizationProvider.DefaultAssembly="Authenticator.UI_WPF"
       lex:ResxLocalizationProvider.DefaultDictionary="Resource"
       >
     <!--  TODO for revit load minimal resources to avoid lagg on loading

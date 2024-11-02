@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using WPFLocalizeExtension.Providers;
 
 namespace Authenticator.Components
 {
@@ -50,6 +51,9 @@ namespace Authenticator.Components
         public ModalLoginLayout()
         {
             InitializeComponent();
+
+            var test = ResxLocalizationProvider.GetDefaultDictionary(this);
+
         }
     }
 }

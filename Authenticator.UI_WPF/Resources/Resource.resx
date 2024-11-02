@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PageStart_ButtonNewsFeed" xml:space="preserve">
+    <value>Read more</value>
+    <comment>+</comment>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>[m2]</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingLine" xml:space="preserve">
+    <value>Building line</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingLine_Boundary" xml:space="preserve">
+    <value>Boundary</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingLine_BoundaryButtonContent" xml:space="preserve">
+    <value>Edit</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingLine_Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingLine_Shape" xml:space="preserve">
+    <value>Geometry</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingLine_ShapeButtonContent" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="BuildingProperties_Label" xml:space="preserve">
+    <value>Building Dimensions</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone" xml:space="preserve">
+    <value>Building  Zone</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_AverageNumberOfLevels" xml:space="preserve">
+    <value>Average count</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_Boundary" xml:space="preserve">
+    <value>Boundary</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_BoundaryButtonContent" xml:space="preserve">
+    <value>Edit</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_BuildingDepthEW" xml:space="preserve">
+    <value>East-West axis depth</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_BuildingDepthNS" xml:space="preserve">
+    <value>North-South axis depth</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_BuildingLength" xml:space="preserve">
+    <value>Length</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_FloorLevelHeight" xml:space="preserve">
+    <value>Repetitive level height</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_BuildingPropertiesHeader" xml:space="preserve">
+    <value>Building dimensions</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_HeightsHeader" xml:space="preserve">
+    <value>Building height</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_LevelsHeader" xml:space="preserve">
+    <value>Levels</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_MaxAbsolutBuildingHeight" xml:space="preserve">
+    <value>Absolut maximum height</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_MaxNumberOfLevels" xml:space="preserve">
+    <value>Maximum level count</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_MaxRelativeBuildingHeight" xml:space="preserve">
+    <value>Maximum height</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_MinAverageBuildingHeight" xml:space="preserve">
+    <value>Minimal average height</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_MinBuildingHeight" xml:space="preserve">
+    <value>Minimum height</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_MinNumberOfLevels" xml:space="preserve">
+    <value>Minimium level count</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_NetInternalAreaExternalWalls" xml:space="preserve">
+    <value>Thickness of external walls</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_NetInternalAreaHeader" xml:space="preserve">
+    <value>Net internal area</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_NetInternalAreaShaftRatio" xml:space="preserve">
+    <value>Shaft ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_ParkingHallAreaPerSpace" xml:space="preserve">
+    <value>Parking hall area per one space</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_ParkingHeader" xml:space="preserve">
+    <value>Parking structure</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_ParkingSpaceAdditional" xml:space="preserve">
+    <value>Additional places</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_ParkingSpacePerFlatRatio" xml:space="preserve">
+    <value>Number of parking spaces per flat</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_ParkingSpacePerM1Ratio" xml:space="preserve">
+    <value>Number of parking spaces per 0-bedroom flat ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_ParkingSpacePerM2Ratio" xml:space="preserve">
+    <value>Number of parking spaces per  1-bedroom flat ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_ParkingSpacePerM3Ratio" xml:space="preserve">
+    <value>Number of parking spaces per 2-bedrooms flat ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_ParkingSpacePerM4Ratio" xml:space="preserve">
+    <value>Number of parking spaces per  3-bedrooms flat ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_ParkingSpacePerM5Ratio" xml:space="preserve">
+    <value>Number of parking spaces per  4-bedrooms flat ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_RepetitveLevelHeight" xml:space="preserve">
+    <value>Repetitive level height</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_StructureHeader" xml:space="preserve">
+    <value>Flat structure</value>
+    <comment>+</comment>
+  </data>
+  <data name="BuildingZone_TopLevelHeight" xml:space="preserve">
+    <value>Top level height</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonExampleProject" xml:space="preserve">
+    <value>Example project</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonExampleProject_ToolTip" xml:space="preserve">
+    <value>Open example project from Kolega</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonNewProject" xml:space="preserve">
+    <value>New project</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonNewProject_ToolTip" xml:space="preserve">
+    <value>Create new project with Kolega</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonOpenProject" xml:space="preserve">
+    <value>Open project</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonOpenProject_ToolTip" xml:space="preserve">
+    <value>Open existing project from Kolega</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone" xml:space="preserve">
+    <value>Check Zone</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_Boundary" xml:space="preserve">
+    <value>Boundary</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_BoundaryButtonContent" xml:space="preserve">
+    <value>Edit</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_BuildingCoverageRatioHeader" xml:space="preserve">
+    <value>Building coverage</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_FloorAreaRatio" xml:space="preserve">
+    <value>Floor area ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_MaxBuildingCoverageRatio" xml:space="preserve">
+    <value>Maximum ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_MaxFloorAreaRatioAboveGround" xml:space="preserve">
+    <value>Maximum above ground</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_MaxFloorAreaRatioAboveAndUnderground" xml:space="preserve">
+    <value>Total</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_MaxFloorAreaRatioHeader" xml:space="preserve">
+    <value>Floor area ratio</value>
+  </data>
+  <data name="CheckZone_MaxFloorAreaRatioUnderground" xml:space="preserve">
+    <value>Maximum underground</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_TotalFloorAreaRatio" xml:space="preserve">
+    <value>Total</value>
+    <comment>+</comment>
+  </data>
+  <data name="CheckZone_UndergroundFloorAreaRatio" xml:space="preserve">
+    <value>Maximum underground</value>
+    <comment>+</comment>
+  </data>
+  <data name="Context_ContextBuildingsCoverageArea" xml:space="preserve">
+    <value>Existing coverage area</value>
+    <comment>+</comment>
+  </data>
+  <data name="Context_ContextBuildingsHeader" xml:space="preserve">
+    <value>Existing buildings on site</value>
+    <comment>+</comment>
+  </data>
+  <data name="Context_ContextBuildingsIncludeInCalculation" xml:space="preserve">
+    <value>Include in the calculation</value>
+    <comment>+</comment>
+  </data>
+  <data name="Context_ContextBuildingsTotalArea" xml:space="preserve">
+    <value>Existing total area</value>
+    <comment>+</comment>
+  </data>
+  <data name="Context_ContextExistingBuildings" xml:space="preserve">
+    <value>Existing buildings</value>
+    <comment>+</comment>
+  </data>
+  <data name="Context_ContextHeader" xml:space="preserve">
+    <value>Context</value>
+    <comment>+</comment>
+  </data>
+  <data name="Context_ContextParcelDivisionDirection" xml:space="preserve">
+    <value>Direction</value>
+    <comment>+</comment>
+  </data>
+  <data name="Context_ContextParcelDivisionHeader" xml:space="preserve">
+    <value>Parcel division</value>
+    <comment>+</comment>
+  </data>
+  <data name="Context_ContextTerrain" xml:space="preserve">
+    <value>Terrain</value>
+    <comment>+</comment>
+  </data>
+  <data name="ExcludedZone_BoundaryButtonContent" xml:space="preserve">
+    <value>Edit</value>
+    <comment>+</comment>
+  </data>
+  <data name="ExcludedZone_ExcludedZoneHeader" xml:space="preserve">
+    <value>Zone excluded from development</value>
+    <comment>+</comment>
+  </data>
+  <data name="ExcludedZone_ExcludedZoneName" xml:space="preserve">
+    <value>Name</value>
+    <comment>+</comment>
+  </data>
+  <data name="Interval_End" xml:space="preserve">
+    <value>max</value>
+    <comment>+</comment>
+  </data>
+  <data name="Interval_Start" xml:space="preserve">
+    <value>min</value>
+    <comment>+</comment>
+  </data>
+  <data name="Length" xml:space="preserve">
+    <value>[m]</value>
+    <comment>+</comment>
+  </data>
+  <data name="LocationDegree" xml:space="preserve">
+    <value>[°]</value>
+    <comment>+</comment>
+  </data>
+  <data name="LocationOnEarth" xml:space="preserve">
+    <value>Location</value>
+    <comment>+</comment>
+  </data>
+  <data name="LocationOnEarth_CheckLocation" xml:space="preserve">
+    <value>Location on map</value>
+  </data>
+  <data name="LocationOnEarth_CheckLocationButton" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="LocationOnEarth_Latitude" xml:space="preserve">
+    <value>Latitude</value>
+    <comment>+</comment>
+  </data>
+  <data name="LocationOnEarth_Longitude" xml:space="preserve">
+    <value>Longitude</value>
+    <comment>+</comment>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageArchitectureInput_Description" xml:space="preserve">
+    <value>Define the spatial parameters of the development.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageArchitectureInput_Number" xml:space="preserve">
+    <value>03</value>
+  </data>
+  <data name="PageArchitectureInput_Title" xml:space="preserve">
+    <value>Architecture</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageCompare_Description" xml:space="preserve">
+    <value>Compile information from different solutions.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageCompare_Number" xml:space="preserve">
+    <value>07</value>
+  </data>
+  <data name="PageCompare_Title" xml:space="preserve">
+    <value>Compare</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageExport_Description" xml:space="preserve">
+    <value>Save the solutions and reports.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageExport_Number" xml:space="preserve">
+    <value>08</value>
+  </data>
+  <data name="PageExport_Title" xml:space="preserve">
+    <value>Export</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageGenerate_Description" xml:space="preserve">
+    <value>Start generating design options.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageGenerate_Number" xml:space="preserve">
+    <value>04</value>
+  </data>
+  <data name="PageGenerate_Title" xml:space="preserve">
+    <value>Generate</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSiteInput_Description" xml:space="preserve">
+    <value>Enter your location and immediate surroundings.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSiteInput_Number" xml:space="preserve">
+    <value>02</value>
+  </data>
+  <data name="PageSiteInput_Title" xml:space="preserve">
+    <value>Site Input</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolutions_Description" xml:space="preserve">
+    <value>Review the design options received.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolutions_Number" xml:space="preserve">
+    <value>05</value>
+  </data>
+  <data name="PageSolutions_Title" xml:space="preserve">
+    <value>Solutions</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolution_Number" xml:space="preserve">
+    <value>05</value>
+  </data>
+  <data name="PageSolution_Title" xml:space="preserve">
+    <value>Solution</value>
+  </data>
+  <data name="PageStart_Description" xml:space="preserve">
+    <value>Start working with Kolega. Create or continue a project.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_Number" xml:space="preserve">
+    <value>01</value>
+  </data>
+  <data name="PageStart_RecentProjectsTitle" xml:space="preserve">
+    <value>Recent projects</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_Subtitle" xml:space="preserve">
+    <value>Sub Test EN</value>
+  </data>
+  <data name="PageStart_Title" xml:space="preserve">
+    <value>Start project</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageUrbanInput_Number" xml:space="preserve">
+    <value>02</value>
+  </data>
+  <data name="PageUrbanInput_SubTitle" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="PageUrbanInput_Title" xml:space="preserve">
+    <value>Urban Input</value>
+    <comment>+</comment>
+  </data>
+  <data name="ProjectData" xml:space="preserve">
+    <value>Site Data</value>
+    <comment>+</comment>
+  </data>
+  <data name="ProjectData_IsDowntown" xml:space="preserve">
+    <value>Downtown</value>
+    <comment>+</comment>
+  </data>
+  <data name="ProjectData_LocationHeader" xml:space="preserve">
+    <value>Location</value>
+    <comment>+</comment>
+  </data>
+  <data name="ProjectData_TrueNorth" xml:space="preserve">
+    <value>True North angle</value>
+    <comment>+</comment>
+  </data>
+  <data name="Ratio" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="TopBar_ViewMode_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+    <comment>+</comment>
+  </data>
+  <data name="TopBar_ViewMode_Basic" xml:space="preserve">
+    <value>Basic</value>
+    <comment>+</comment>
+  </data>
+  <data name="TopBar_ViewMode_ToolTip" xml:space="preserve">
+    <value>User Mode - Advanced parameters</value>
+    <comment>+</comment>
+  </data>
+  <data name="Surrounding_Name" xml:space="preserve">
+    <value>Context name</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonSolutionGoBack" xml:space="preserve">
+    <value>Back to Solutions List</value>
+  </data>
+  <data name="PageArchitectureInput_StructureDisplayParkingAreaProperty" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StructureDisplay_ParkingAreaProperty" xml:space="preserve">
+    <value>Parking Space Area</value>
+  </data>
+  <data name="BuildingZone_Add" xml:space="preserve">
+    <value>Add Building Zone</value>
+  </data>
+  <data name="CheckZone_Add" xml:space="preserve">
+    <value>Add Check Zone</value>
+  </data>
+  <data name="Context_ExcludedZoneAdd" xml:space="preserve">
+    <value>Add Excluded Zone</value>
+  </data>
+  <data name="Context_SurroundingAdd" xml:space="preserve">
+    <value>Add surrounding</value>
+  </data>
+  <data name="Context_TerrainAdd" xml:space="preserve">
+    <value>Add terrain</value>
+  </data>
+  <data name="Manage_DeleteItem" xml:space="preserve">
+    <value>Delete item</value>
+  </data>
+  <data name="PageStart_NewsFeedItem" xml:space="preserve">
+    <value>Software that enables the generation of solutions for a specific plot of land - urban layouts and floor plans based on the given parameters of the project.</value>
+  </data>
+  <data name="PageStart_NewsFeedItem1" xml:space="preserve">
+    <value>We are excited to announce the launch of the Kolega! This innovative app is designed to streamline architectural workflows, enhance collaboration, and boost productivity for architects worldwide. With features like real-time project sharing, 3D modeling tools, and integrated project management, the Kolega App is set to revolutionize the way architects work.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewsFeedItem2" xml:space="preserve">
+    <value>Architects from around the globe are already praising the Kolega App's intuitive interface and powerful features. By leveraging the latest in technology, Kolega empowers architects to bring their visions to life with unprecedented ease. Stay tuned for success stories and updates from architects who have adopted Kolega as their go-to tool.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewsFeedItem3" xml:space="preserve">
+    <value>Are you an architect looking to simplify your work and enhance your designs? Join the Kolega community today and experience the future of architectural software.</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewsFeedSubTitle" xml:space="preserve">
+    <value>Your new digital partner in design.</value>
+  </data>
+  <data name="PageStart_NewsFeedTitle" xml:space="preserve">
+    <value>Meet Kolega.</value>
+  </data>
+  <data name="PageStart_NewsFeedTitle1" xml:space="preserve">
+    <value>Introducing Kolega</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewsFeedTitle2" xml:space="preserve">
+    <value>Embrace the Future</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewsFeedTitle3" xml:space="preserve">
+    <value>Join the Community Today!</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>+</comment>
+  </data>
+  <data name="CommunicationWaitingLong" xml:space="preserve">
+    <value>Kolega is working. It's coffee time for you.</value>
+    <comment>+</comment>
+  </data>
+  <data name="FooterBugReport" xml:space="preserve">
+    <value>Report bug</value>
+    <comment>+</comment>
+  </data>
+  <data name="FooterKolegaSite" xml:space="preserve">
+    <value>kolega.space</value>
+    <comment>+</comment>
+  </data>
+  <data name="FooterSurveySuggestion" xml:space="preserve">
+    <value>Add suggestion</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageGenerate_GenerateButtonContent" xml:space="preserve">
+    <value>Start generating</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageGenerate_MaxTime" xml:space="preserve">
+    <value>Generate no longer than</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageGenerate_NumberOfSolutions" xml:space="preserve">
+    <value>Maximum number of solutions</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageGenerate_OptimizeSwitch" xml:space="preserve">
+    <value>Optimize geometry</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageGenerate_Progress" xml:space="preserve">
+    <value>Progress</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewProjectTitle" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="PageStart_AddPath" xml:space="preserve">
+    <value>Add file localization</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewProjectCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewProjectCancelTooltip" xml:space="preserve">
+    <value>Cancel project creation</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewProjectCreate" xml:space="preserve">
+    <value>Create</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageStart_NewProjectCreateTooltip" xml:space="preserve">
+    <value>Create a new project</value>
+    <comment>+</comment>
+  </data>
+  <data name="ViewSettings_ShowAllTooltip" xml:space="preserve">
+    <value>Show all</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonGoNextArchitecture" xml:space="preserve">
+    <value>Next step: Architecture</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonGoNextGenerate" xml:space="preserve">
+    <value>Next step</value>
+    <comment>+</comment>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>null</value>
+  </data>
+  <data name="ButtonGoNextCompare" xml:space="preserve">
+    <value>Next step: Compare</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolution_FilterHeader" xml:space="preserve">
+    <value>Solution filter</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolution_OutputBuildingArea" xml:space="preserve">
+    <value>Building area</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolution_OutputDaylight" xml:space="preserve">
+    <value>Achieved daylight ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolution_OutputDaylightMax" xml:space="preserve">
+    <value>Minimum daylight ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolution_OutputFloorArea" xml:space="preserve">
+    <value>Total floor area</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolution_OutputObstruction" xml:space="preserve">
+    <value>Achieved obstruction ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolution_OutputObstructionMax" xml:space="preserve">
+    <value>Minimum obstruction ratio</value>
+    <comment>+</comment>
+  </data>
+  <data name="PageSolution_SortingHeader" xml:space="preserve">
+    <value>Sorting solutions</value>
+    <comment>+</comment>
+  </data>
+  <data name="ViewSettings_Export" xml:space="preserve">
+    <value>Export</value>
+    <comment>+</comment>
+  </data>
+  <data name="ViewSettings_ViewAnalytical" xml:space="preserve">
+    <value>Measuring points</value>
+    <comment>+</comment>
+  </data>
+  <data name="ViewSettings_ViewDaylight" xml:space="preserve">
+    <value>Daylight</value>
+    <comment>+</comment>
+  </data>
+  <data name="ViewSettings_ViewFlats" xml:space="preserve">
+    <value>Flats</value>
+    <comment>+</comment>
+  </data>
+  <data name="ViewSettings_ViewInput" xml:space="preserve">
+    <value>Input</value>
+    <comment>+</comment>
+  </data>
+  <data name="ViewSettings_ViewMass" xml:space="preserve">
+    <value>Masses</value>
+    <comment>+</comment>
+  </data>
+  <data name="ViewSettings_ViewObstruction" xml:space="preserve">
+    <value>Obstruction</value>
+    <comment>+</comment>
+  </data>
+  <data name="ViewSettings_ViewWireframe" xml:space="preserve">
+    <value>Wireframes</value>
+    <comment>+</comment>
+  </data>
+  <data name="Surrounding" xml:space="preserve">
+    <value>Surroundings</value>
+  </data>
+  <data name="ModalLogin_Title" xml:space="preserve">
+    <value>Say Hi to Kolega.</value>
+  </data>
+  <data name="ModalLogin_ButtonAppleLogin" xml:space="preserve">
+    <value>Sign In with Apple</value>
+  </data>
+  <data name="ModalLogin_ButtonChangePassword" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="ModalLogin_ButtonGoogleLogin" xml:space="preserve">
+    <value>Sign In with Google</value>
+  </data>
+  <data name="ModalLogin_ButtonLogin" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="ModalLogin_ButtonSignUp" xml:space="preserve">
+    <value>Sing up</value>
+  </data>
+  <data name="ModalLogin_ChangePasswordText" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="ModalLogin_SignUpText" xml:space="preserve">
+    <value>Don't have an account yet?</value>
+  </data>
+  <data name="ModalLogin_SubTitle" xml:space="preserve">
+    <value>Sing in to your account</value>
+  </data>
+  <data name="ModalLogin_Text1" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="UserData_EmailPreview" xml:space="preserve">
+    <value>[e-mail]</value>
+  </data>
+  <data name="UserData_LastNamePreview" xml:space="preserve">
+    <value>[last name]</value>
+  </data>
+  <data name="UserData_NamePreview" xml:space="preserve">
+    <value>[name]</value>
+  </data>
+  <data name="UserData_PasswordPreview" xml:space="preserve">
+    <value>[password]</value>
+  </data>
+  <data name="ModalPasswordChanged_ButtonGoBackToLogin" xml:space="preserve">
+    <value>Go back to login</value>
+  </data>
+  <data name="ModalPasswordChanged_CheckEmailText" xml:space="preserve">
+    <value>Check your email inbox. Follow the link and set a new password following the instructions in the message from us.</value>
+  </data>
+  <data name="ModalPasswordChanged_SubTitle" xml:space="preserve">
+    <value>We have sent you an email to change your password.</value>
+  </data>
+  <data name="ModalPasswordChanged_Title" xml:space="preserve">
+    <value>Reset password</value>
+  </data>
+  <data name="ModalRegistered_ButtonGoBackToLogin" xml:space="preserve">
+    <value>Go to login</value>
+  </data>
+  <data name="ModalRegistered_ButtonSendAgain" xml:space="preserve">
+    <value>Resend</value>
+  </data>
+  <data name="ModalRegistered_CheckEmailText" xml:space="preserve">
+    <value>Check your email for a verification link and log in.</value>
+  </data>
+  <data name="ModalRegistered_NoEmailRevicedText" xml:space="preserve">
+    <value>Haven't recived verification email?</value>
+  </data>
+  <data name="ModalRegistered_SubTitle" xml:space="preserve">
+    <value>Verification email sent</value>
+  </data>
+  <data name="ModalRegistered_Title" xml:space="preserve">
+    <value>Meet your new Kolega!</value>
+  </data>
+  <data name="ModalRegister_ButtonCancle" xml:space="preserve">
+    <value>Go Back</value>
+  </data>
+  <data name="ModalRegister_ButtonRegister" xml:space="preserve">
+    <value>Create an account</value>
+  </data>
+  <data name="ModalRegister_SubTitle" xml:space="preserve">
+    <value>Create an account</value>
+  </data>
+  <data name="ModalRegister_Title" xml:space="preserve">
+    <value>Say Hi to Kolega!</value>
+  </data>
+  <data name="ProjectData_AnalysisHeader" xml:space="preserve">
+    <value>Analysis Settings</value>
+  </data>
+  <data name="ProjectData_AnalyzeObstruction" xml:space="preserve">
+    <value>Analyze Obstruction</value>
+  </data>
+  <data name="ProjectData_TimeRequirements" xml:space="preserve">
+    <value>Dayligth Settings</value>
+  </data>
+  <data name="ButtonExampleProject1" xml:space="preserve">
+    <value>Simple Site Example Project</value>
+  </data>
+  <data name="ButtonExampleProject2" xml:space="preserve">
+    <value>Standard Site Example Project</value>
+  </data>
+  <data name="ButtonExampleProject3" xml:space="preserve">
+    <value>Complex Site Example Project</value>
+  </data>
+  <data name="BuildingZone_BuildingOrientationAngle" xml:space="preserve">
+    <value>Building orientation angle</value>
+  </data>
+  <data name="BuildingZone_BuildingOrientationAngleDeviation" xml:space="preserve">
+    <value>Acceptable building orientation angle deviation</value>
+  </data>
+  <data name="ButtonExampleProject1_Tooltip" xml:space="preserve">
+    <value>Open example project</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonExampleProject2_Tooltip" xml:space="preserve">
+    <value>Open example project</value>
+    <comment>+</comment>
+  </data>
+  <data name="ButtonExampleProject3_Tooltip" xml:space="preserve">
+    <value>Open example project</value>
+    <comment>+</comment>
+  </data>
+  <data name="FooterUserGuide" xml:space="preserve">
+    <value>User Guide</value>
+    <comment>+</comment>
+  </data>
+  <data name="GoToProfile" xml:space="preserve">
+    <value>Log out</value>
+    <comment>+</comment>
+  </data>
+  <data name="Radians" xml:space="preserve">
+    <value>[deg]</value>
+  </data>
+  <data name="TimeRequirementViewModel_TimeSpanToPassPreview" xml:space="preserve">
+    <value>Time requierd                   </value>
+  </data>
+  <data name="BuildingZone_BuildingAtticHeight" xml:space="preserve">
+    <value>Roof attic height</value>
+  </data>
+  <data name="Flat0Bedroom" xml:space="preserve">
+    <value>0-bedroom</value>
+  </data>
+  <data name="Flat1Bedroom" xml:space="preserve">
+    <value>1-bedroom</value>
+  </data>
+  <data name="Flat2Bedrooms" xml:space="preserve">
+    <value>2-bedroom</value>
+  </data>
+  <data name="Flat3Bedrooms" xml:space="preserve">
+    <value>3-bedroom</value>
+  </data>
+  <data name="Flat4Bedrooms" xml:space="preserve">
+    <value>4-bedroom</value>
+  </data>
+  <data name="PageSolution_OutputBAMax" xml:space="preserve">
+    <value>Minimum Building Footprint Area</value>
+  </data>
+  <data name="PageSolution_OutputFAMax" xml:space="preserve">
+    <value>Minimum Floor Area</value>
+  </data>
+  <data name="PageSolution_StarOnly" xml:space="preserve">
+    <value>Show starred only</value>
+  </data>
+  <data name="BuildingZone_BuildingHeightFloor" xml:space="preserve">
+    <value>Floor heigth</value>
+  </data>
+  <data name="BuildingZone_TopFloorLevelHeight" xml:space="preserve">
+    <value>Top floor level heigth</value>
+  </data>
+  <data name="BuildingZone_GroundFloorLevelHeight" xml:space="preserve">
+    <value>Groundfloor heigth</value>
+  </data>
+  <data name="BuildingZone_BuildingNumberOfLevels" xml:space="preserve">
+    <value>Number of levels</value>
+  </data>
+  <data name="ProjectData_FlatsAreaRatio" xml:space="preserve">
+    <value>Flat area ratio</value>
+  </data>
+  <data name="ProjectData_FlatSettings" xml:space="preserve">
+    <value>Flat Settings</value>
+  </data>
+  <data name="ProjectData_FlatSettingsHeader" xml:space="preserve">
+    <value>Area Settings</value>
+  </data>
+</root>
