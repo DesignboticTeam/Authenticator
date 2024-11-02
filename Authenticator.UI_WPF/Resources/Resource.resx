@@ -970,4 +970,34 @@
   <data name="ProjectData_FlatSettingsHeader" xml:space="preserve">
     <value>Area Settings</value>
   </data>
+  <data name="ageStart_ButtonNewsFeed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BuildingZone_BuildingGroundFloor" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BuildingZone_BuildingHeightFloorLast" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BuildingZone_BuildingLevelHeight" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CheckZone_BuildingCoverageRatio" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CheckZone_FloorAreaRatioHeader" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CheckZone_MaxFloorAreaRatio" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocalizationOnEarth_Latitude" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocalizationOnEarth_Longitude" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ViewSettings_Wireframe" xml:space="preserve">
+    <value />
+  </data>
 </root>

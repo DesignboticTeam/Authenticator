@@ -33,6 +33,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.resx">
+      <Generator>
+      </Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
