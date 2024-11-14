@@ -10,11 +10,7 @@ namespace Authenticator.Components
     {
         public ModalLogin()
         {
-
             InitializeComponent();
-
-            var test = ResxLocalizationProvider.GetDefaultDictionary(this);
-           // var test2 = ResxLocalizationProvider.Instance.GetLocalizedObject();
         }
     }
 }

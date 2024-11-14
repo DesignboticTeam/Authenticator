@@ -10,6 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Bootstrap\AuthenticatorBootstrap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration\SpecialConfigurator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryptor\Encryptor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Resources\Resource.Designer.cs" />
   </ItemGroup>
   <ItemGroup>

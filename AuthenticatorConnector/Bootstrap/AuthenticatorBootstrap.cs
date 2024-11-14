@@ -1,4 +1,5 @@
-﻿using Connector;
+﻿using AuthenticatorConnector.Configuration;
+using Connector;
 using Connector.DataModels;
 using Connector.Exceptions;
 using Connector.Interfaces;
@@ -24,7 +25,9 @@ namespace AuthenticatorConnector.Bootstrap
         public static IHostBuilder CreateBuilder(string[]? args)
         {
             var executionFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
+            
+            var specialConfigurator = new EncryptedJsonConfigurationSource();
+            
             var host = Host.CreateDefaultBuilder(args)
                 //TODO move to Connector
                 .ConfigureAppConfiguration((hostingContext, config) =>
@@ -34,7 +37,11 @@ namespace AuthenticatorConnector.Bootstrap
                     config.SetBasePath(executionFolder)
                         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{env}.json", optional: true, reloadOnChange: true)
-                        .AddEnvironmentVariables().Build();
+                        .AddEncryptedJsonFile("appsettings.json", "DesignboticTools")
+                        .AddEnvironmentVariables()
+                        .Build();
+
+                  //  config.AddEncryptedJsonFile(Path.Combine(executionFolder, "appsettings.json"), "DesignboticTools").Build();
                 })
                 .UseSerilog()
                 .ConfigureServices((hostingContext, services) =>

@@ -51,9 +51,6 @@ namespace Authenticator.Components
         public ModalLoginLayout()
         {
             InitializeComponent();
-
-            var test = ResxLocalizationProvider.GetDefaultDictionary(this);
-
         }
     }
 }
