@@ -34,6 +34,9 @@ namespace Authenticator.UI_WPF
             InitializeComponent();
             _pageSelector = pageSelector;  
             MainContent.ContentTemplateSelector = pageSelector;
+            //TODO make separate selector
+            MainModalContent.ContentTemplateSelector = pageSelector;
+
         }
     }
 }

@@ -8,7 +8,13 @@
       
       Width="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ActualWidth}"
       Height="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ActualHeight}"
-      
+
+      xmlns:m ="clr-namespace:UI_WPF.Localization;assembly=UI_WPF"             
+      xmlns:lex="http://wpflocalizeextension.codeplex.com"
+      lex:LocalizeDictionary.DesignCulture="en"
+      lex:ResxLocalizationProvider.DefaultAssembly="Authenticator.UI_WPF"
+      lex:ResxLocalizationProvider.DefaultDictionary="Resource"     
+             
       d:DesignHeight="450" d:DesignWidth="800"
       >
 
@@ -26,15 +32,20 @@
     <Grid>
         <StackPanel>
             <TextBlock HorizontalAlignment="Center" Text="Main Page"></TextBlock>
-            <ContentControl Panel.ZIndex="1"
-                        Visibility= "{Binding IsModalOpen, Converter={StaticResource BooleanToVisibilityConverter}}" 
-                        Content= "{Binding CurrentModalViewModel}" />
-            
+
+            <TextBlock HorizontalAlignment="Center" Text="MainContent"></TextBlock>
             <ContentControl 
                 Name="MainContent"
                 Content="{Binding CurrentPageViewModel}"
             >
             </ContentControl>
+
+            <TextBlock HorizontalAlignment="Center" Text="ModalContent" Cursor=""></TextBlock>
+            <ContentControl Panel.ZIndex="1"
+                        Name="MainModalContent"
+                        Visibility= "{Binding IsModalOpen, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                        Content= "{Binding CurrentModalViewModel}" />
+            
         </StackPanel>
 
     </Grid>

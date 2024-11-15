@@ -35,8 +35,7 @@
 		<PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
 		<PackageReference Include="Serilog.Sinks.Debug" Version="3.0.0" />
 		<PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
-		<PackageReference Include="WPFLocalizeExtension" Version="3.10.0" />
-		
+		<PackageReference Include="WPFLocalizeExtension" Version="3.10.0" />		
 	</ItemGroup>
 	
 	<ItemGroup>
@@ -46,4 +45,33 @@
 	</ItemGroup>
 	
 	<Import Project="..\AuthenticatorConnector\AuthenticatorConnector.projitems" Label="Shared" />
+	
+	<ItemGroup>
+	  <Compile Remove="C:\Users\konra\Documents\repos\Authenticator\AuthenticatorConnector\Resources\Resource.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AppSettings Include="$(ProjectDir)appsettings.json" />
+		<EncryptedSettings Include="$(ProjectDir)appsettings.enc" />
+		<EncryptionKey Include="DesingboticTools" />
+
+	</ItemGroup>
+
+	<!-- Build ConfigEncryptor if needed 
+	<Target Name="BuildConfigEncryptor">
+		<MSBuild Projects="$(SolutionDir)UserSettingsUtility\UserSettingsUtility.csproj" Targets="Build" Properties="Configuration=$(Configuration)" />
+	</Target>
+-->
+	<!-- Encrypt the configuration file -->
+	<Target Name="EncryptConfig" AfterTargets="PostBuildEvent">
+		<!-- Run the encryption utility -->
+		<Exec Command='dotnet "$(SolutionDir)UserSettingsUtility\bin\Debug\net8.0\UserSettingsUtility.dll" "@(AppSettings)" "@(EncryptedSettings)" "@(EncryptionKey)"' />
+
+		<!-- Delete the plain appsettings.json from the output directory 
+		<Delete Files="$(OutDir)appsettings.json" />
+-->
+		<!-- Copy the encrypted appsettings.enc to the output directory -->
+		<Copy SourceFiles="@(EncryptedSettings)" DestinationFolder="$(OutDir)" />
+	</Target>
+
 </Project>
