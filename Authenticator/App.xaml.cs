@@ -56,17 +56,19 @@ namespace Authenticator
 
                     //Nav structure init
                     services.AddSingleton<PageDataTempleSelector>();
-                    var mapper = new ViewModelToViewMapper();
-                    
+  
+                    var mapper = new ViewModelToViewMapper();                   
                     mapper.RegisterMapping<MainPageViewModel, MainPage>();
                     mapper.RegisterMapping<AuthenticatorMainPageViewModel, AuthenticatorMainPage>();
+
 
                     mapper.RegisterMapping<ModalLoginViewModel, ModalLogin>();
                     mapper.RegisterMapping<ModalPasswordChangedViewModel, ModalPasswordChanged>();
                     mapper.RegisterMapping<ModalRegisterViewModel, ModalRegister>();
                     mapper.RegisterMapping<ModalRegisteredViewModel, ModalRegistered>();
-
+                    
                     services.AddSingleton<IViewModelToViewMapper>(mapper);
+
                 });
 
             try {
