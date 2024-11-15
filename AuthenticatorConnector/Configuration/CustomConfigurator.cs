@@ -40,7 +40,7 @@ namespace AuthenticatorConnector.Configuration
     }
         public class CustomConfigurationProvider : FileConfigurationProvider
         {
-            string _toolMode { get; set; }//=> "DesingboticTools";
+            string _toolMode { get; set; }
             public CustomConfigurationProvider(CustomConfigurationSource source, string toolMode) : base(source) {
                 _toolMode = toolMode;
             }

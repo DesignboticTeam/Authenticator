@@ -14,9 +14,13 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="customsettings.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="customsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -65,7 +69,7 @@
 	<!-- Encrypt the configuration file -->
 	<Target Name="EncryptConfig" AfterTargets="PostBuildEvent">
 		<!-- Run the encryption utility -->
-		<Exec Command='dotnet "$(SolutionDir)UserSettingsUtility\bin\Debug\net8.0\UserSettingsUtility.dll" "@(AppSettings)" "@(EncryptedSettings)" "@(EncryptionKey)"' />
+		<Exec Command="dotnet &quot;$(SolutionDir)UserSettingsUtility\bin\Debug\net8.0\UserSettingsUtility.dll&quot; &quot;@(AppSettings)&quot; &quot;@(EncryptedSettings)&quot; &quot;@(EncryptionKey)&quot;" />
 
 		<!-- Delete the plain appsettings.json from the output directory 
 		<Delete Files="$(OutDir)appsettings.json" />

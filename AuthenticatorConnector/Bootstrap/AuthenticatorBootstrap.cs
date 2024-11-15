@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using NextDesignerAnalysis.Daylight;
 using NextDesignerAnalysis.Interfaces;
 using NextDesignerElements;
@@ -38,6 +39,8 @@ namespace AuthenticatorConnector.Bootstrap
                     var env = hostingContext.HostingEnvironment.EnvironmentName; //Set from DOTNET_ENVIRONMENT
                     config.SetBasePath(executionFolder)
                         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                        .AddJsonFile("customsettings.json", optional: false, reloadOnChange: true)
+
                         .AddJsonFile($"appsettings.{env}.json", optional: true, reloadOnChange: true)
                         .AddCustomConfigurationJsonFile("appsettings.enc", "DesingboticTools")
                         .AddEnvironmentVariables()
@@ -50,6 +53,10 @@ namespace AuthenticatorConnector.Bootstrap
                 {
 
                     services.Configure<AppSettings>(hostingContext.Configuration.GetSection("AppSettings"));
+
+                    services.Configure<CustomSettings>(hostingContext.Configuration.GetSection("CustomSettings"));
+
+                    services.AddSingleton<IPostConfigureOptions<CustomSettings>, CustomSettingsPostConfigure>();
 
                     services.ConfigureServicesAuthenticator();
 
