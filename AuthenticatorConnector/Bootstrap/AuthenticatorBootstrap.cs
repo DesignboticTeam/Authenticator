@@ -25,6 +25,11 @@ namespace AuthenticatorConnector.Bootstrap
 {
     public static class AuthenticatorBootstrap
     {
+        //TODO Move customConfig to Connector
+        //TOOD Move enc to Connector with Utility and setup in Analyzer
+        //TODO Add PostConfigFor AppSettings -> add paths
+        //TODO add enc CustomSettings to project
+
         public static IHostBuilder CreateBuilderStandalone(string[]? args)
         {
             var executionFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -38,11 +43,13 @@ namespace AuthenticatorConnector.Bootstrap
                     //Default stuff
                     var env = hostingContext.HostingEnvironment.EnvironmentName; //Set from DOTNET_ENVIRONMENT
                     config.SetBasePath(executionFolder)
-                        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                        .AddJsonFile("customsettings.json", optional: false, reloadOnChange: true)
+                        //.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                        //.AddJsonFile("customsettings.json", optional: false, reloadOnChange: true)
 
-                        .AddJsonFile($"appsettings.{env}.json", optional: true, reloadOnChange: true)
+                        //.AddJsonFile($"appsettings.{env}.json", optional: true, reloadOnChange: true)
                         .AddCustomConfigurationJsonFile("appsettings.enc", "DesingboticTools")
+                        .AddCustomConfigurationJsonFile("customsettings.enc", "DesingboticTools")
+
                         .AddEnvironmentVariables()
                         .Build();
 
@@ -53,19 +60,16 @@ namespace AuthenticatorConnector.Bootstrap
                 {
 
                     services.Configure<AppSettings>(hostingContext.Configuration.GetSection("AppSettings"));
-
                     services.Configure<CustomSettings>(hostingContext.Configuration.GetSection("CustomSettings"));
 
                     services.AddSingleton<IPostConfigureOptions<CustomSettings>, CustomSettingsPostConfigure>();
 
                     services.ConfigureServicesAuthenticator();
-
                     services.AddNeededServicesIfNotAdded();
                 });
 
             return host;
         }
-
 
         /// <summary>
         /// Configurates UI for Authentication as Service in App. NOTE: Use last after all UI Services are added.
