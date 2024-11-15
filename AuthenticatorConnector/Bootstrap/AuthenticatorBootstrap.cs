@@ -1,4 +1,5 @@
-﻿using AuthenticatorConnector.Configuration;
+﻿using Authenticator.UI_WPF.Bootstrap;
+using AuthenticatorConnector.Configuration;
 using Connector;
 using Connector.DataModels;
 using Connector.Exceptions;
@@ -17,16 +18,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using UI_WPF.Interfaces;
 
 namespace AuthenticatorConnector.Bootstrap
 {
     public static class AuthenticatorBootstrap
     {
-        public static IHostBuilder CreateBuilder(string[]? args)
+        public static IHostBuilder CreateBuilderStandalone(string[]? args)
         {
             var executionFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             
-            var specialConfigurator = new EncryptedJsonConfigurationSource();
+            var specialConfigurator = new CustomConfigurationSource();
             
             var host = Host.CreateDefaultBuilder(args)
                 //TODO move to Connector
@@ -37,7 +39,7 @@ namespace AuthenticatorConnector.Bootstrap
                     config.SetBasePath(executionFolder)
                         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{env}.json", optional: true, reloadOnChange: true)
-                        .AddEncryptedJsonFile("appsettings.enc", "DesignboticTools")
+                        .AddCustomConfigurationJsonFile("appsettings.enc", "DesingboticTools")
                         .AddEnvironmentVariables()
                         .Build();
 
@@ -46,20 +48,52 @@ namespace AuthenticatorConnector.Bootstrap
                 .UseSerilog()
                 .ConfigureServices((hostingContext, services) =>
                 {
-                    //Default stuff
+
                     services.Configure<AppSettings>(hostingContext.Configuration.GetSection("AppSettings"));
 
-                    services.TryAddSingleton<IDialogService, DialogService>();
-                    services.TryAddSingleton<IMessagePrompter, MessagePrompter>();
-                    services.TryAddSingleton<IExceptionHandler, UserExceptionHandler>();
+                    services.ConfigureServicesAuthenticator();
 
-                    services.TryAddSingleton<IDataService, FileService>();
-
-                    services.TryAddSingleton<IWebService, WebConnectorService>();
-                    services.AddSingleton<IAuthenticationService, FirebaseAuthenticationService>();
+                    services.AddNeededServicesIfNotAdded();
                 });
 
             return host;
+        }
+
+
+        /// <summary>
+        /// Configurates UI for Authentication as Service in App. NOTE: Use last after all UI Services are added.
+        /// </summary>
+        /// <param name="services">Service Collection</param>
+        /// <param name="mapper">ViewModel Mapper -> add all other mappings before -> mapper will be added to ServiceCollector</param>
+        /// <param name="ensureNeedServices">Ensure to initilize needed Services for UI to work</param>
+        /// <returns></returns>
+        public static IServiceCollection ConfigureServicesAuthenticator(this IServiceCollection services, bool ensureNeedServices = true)
+        {
+            //Add AuthModals
+            services.AddSingleton<IAuthenticationService, FirebaseAuthenticationService>();
+
+            //Ensure needed services
+            if (ensureNeedServices)
+            {
+                services.AddNeededServicesIfNotAdded();
+            }
+
+            return services;
+        }
+
+        /// <summary>
+        /// Configure needed services if not initialized already -> should be used after all other initialization.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddNeededServicesIfNotAdded(this IServiceCollection services)
+        {
+            services.TryAddSingleton<IDialogService, DialogService>();
+            services.TryAddSingleton<IMessagePrompter, MessagePrompter>();
+            services.TryAddSingleton<IExceptionHandler, UserExceptionHandler>();
+            services.TryAddSingleton<IDataService, FileService>();
+            services.TryAddSingleton<IWebService, WebConnectorService>();
+            return services;
         }
     } 
 }

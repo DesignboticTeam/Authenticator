@@ -44,7 +44,7 @@ namespace AuthenticatorTests
             encryptedStream.Position = 0;
 
             // Create the custom configuration provider
-            var provider = new EncryptedJsonConfigurationProvider(new EncryptedJsonConfigurationSource());
+            var provider = new EncryptedJsonConfigurationProvider(new CustomConfigurationSource());
 
             // Act
             provider.Load(encryptedStream);

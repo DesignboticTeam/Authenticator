@@ -40,7 +40,7 @@ namespace Authenticator.UI_WPF.Bootstrap
             mapper.RegisterMapping<MainPageViewModel, MainPage>();
             mapper.RegisterMapping<AuthenticatorMainPageViewModel, AuthenticatorMainPage>();
 
-            ConfigureServices(services, mapper, true);
+            services.ConfigureServicesAuthenticatorUI(mapper, true);
 
             return services;
         }
@@ -51,7 +51,7 @@ namespace Authenticator.UI_WPF.Bootstrap
         /// <param name="mapper">ViewModel Mapper -> add all other mappings before -> mapper will be added to ServiceCollector</param>
         /// <param name="ensureNeedServices">Ensure to initilize needed Services for UI to work</param>
         /// <returns></returns>
-        public static IServiceCollection ConfigureServices(IServiceCollection services, IViewModelToViewMapper mapper, bool ensureNeedServices = true)
+        public static IServiceCollection ConfigureServicesAuthenticatorUI(this IServiceCollection services, IViewModelToViewMapper mapper, bool ensureNeedServices = true)
         {
             //Add AuthModals
             services.ConfigureViewModels();

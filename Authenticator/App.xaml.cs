@@ -37,7 +37,7 @@ namespace Authenticator
             BootstrapLogger.InitializeLogger();
 
             string[] args = [];
-            var builder = AuthenticatorBootstrap.CreateBuilder(null)
+            var builder = AuthenticatorBootstrap.CreateBuilderStandalone(null)
                 .ConfigureServices(services =>
                 {
                     BootstrapAuthenticatorUI.ConfigureServicesStandalone(services);

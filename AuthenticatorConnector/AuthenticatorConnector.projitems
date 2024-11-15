@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Bootstrap\AuthenticatorBootstrap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configuration\SpecialConfigurator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryptor\Encryptor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModels\UserSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\db_tools_sunligth_icon.ico">
