@@ -37,7 +37,7 @@ namespace AuthenticatorConnector.Bootstrap
                     config.SetBasePath(executionFolder)
                         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{env}.json", optional: true, reloadOnChange: true)
-                        .AddEncryptedJsonFile("appsettings.json", "DesignboticTools")
+                        .AddEncryptedJsonFile("appsettings.enc", "DesignboticTools")
                         .AddEnvironmentVariables()
                         .Build();
 
