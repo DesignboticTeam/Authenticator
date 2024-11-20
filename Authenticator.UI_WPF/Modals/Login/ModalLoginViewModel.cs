@@ -107,7 +107,7 @@ namespace Authenticator.Components
                         break;
                 }
                 case LoginStatus.Error: {
-                        Status = "Error";
+                        Status = "Error: " + e.Data.ToString();
                         break;
                     }
                 case LoginStatus.Expired: {

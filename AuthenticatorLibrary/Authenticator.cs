@@ -1,6 +1,7 @@
 ﻿using Authenticator.UI_WPF.Bootstrap;
 using AuthenticatorConnector.Bootstrap;
 using AuthenticatorConnector.Configuration;
+using Connector.DataModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +29,8 @@ namespace AuthenticatorWPF
             })
             .ConfigureServices((hostingContext, services) =>
             {
+                services.Configure<CustomSettings>(hostingContext.Configuration.GetSection("CustomSettings"));
+
                 services.ConfigureServicesAuthenticator();
                 var test = services;
                 /*
