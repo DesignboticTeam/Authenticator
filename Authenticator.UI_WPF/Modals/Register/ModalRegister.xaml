@@ -1,40 +1,37 @@
-﻿<UserControl x:Class="NextDesignerWPF.Views.ModalRegister"
+﻿<UserControl x:Class="Authenticator.Components.ModalRegister"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:NextDesignerWPF.Views"
+      xmlns:local="clr-namespace:Authenticator.Components"
       mc:Ignorable="d"
       d:DesignHeight="450" 
       d:DesignWidth="700"
              
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:components="clr-namespace:UI_WPF.Components;assembly=UI_WPF"
-      xmlns:componentsKolega="clr-namespace:NextDesignerWPF.Components"
 
-      xmlns:m ="clr-namespace:NextDesignerWPF.Localization"
+      xmlns:m ="clr-namespace:UI_WPF.Localization;assembly=UI_WPF"             
       xmlns:lex="http://wpflocalizeextension.codeplex.com"
-      lex:LocalizeDictionary.DesignCulture="de"
-      lex:ResxLocalizationProvider.DefaultAssembly="NextDesignerWPF"
-      lex:ResxLocalizationProvider.DefaultDictionary="Resource"
-      Background="{StaticResource NextDesignerBackgroundPrimaryColor}"
-             
+      lex:LocalizeDictionary.DesignCulture="en"
+      lex:ResxLocalizationProvider.DefaultAssembly="Authenticator.UI_WPF"
+      lex:ResxLocalizationProvider.DefaultDictionary="LocalizationUser"          
       >
     <!--  TODO for revit load minimal resources to avoid lagg on loading
         <UserControl.Resources>
         <ResourceDictionary Source="pack://application:,,,/NextDesignerWPF;component/Resources.xaml" />
     </UserControl.Resources>
     -->
-    <componentsKolega:ModalLoginLayout
+
+    <local:ModalLoginLayout
                 ModalSubTitle="{lex:Loc {Binding SubTitleKey}}"                           
                 ModalTitle="{lex:Loc {Binding TitleKey}}"                           
                 IconPath="{Binding IconPath}">
-        <!-- Login content -->
         <StackPanel>
             <components:TextBoxWithPreview Margin="0,10,0,0" TextValue="{Binding User.Name}"/>
             <components:TextBoxWithPreview Margin="0,10,0,0" TextValue="{Binding User.LastName}"/>
             <components:TextBoxWithPreview Margin="0,10,0,0" TextValue="{Binding User.Email}"/>
-            <componentsKolega:PasswordBoxWithPreview Margin="0,10,0,0" Password="{Binding User.Password, Mode=TwoWay}"/>
+            <components:PasswordBoxWithPreview Margin="0,10,0,0" Password="{Binding User.Password, Mode=TwoWay}"/>
 
             <Button 
                     Margin="0,20,0,0"
@@ -51,6 +48,6 @@
 
             <TextBlock HorizontalAlignment="Center" Text="{Binding Status}"></TextBlock>
         </StackPanel>
-    </componentsKolega:ModalLoginLayout>
+    </local:ModalLoginLayout>
 
 </UserControl>

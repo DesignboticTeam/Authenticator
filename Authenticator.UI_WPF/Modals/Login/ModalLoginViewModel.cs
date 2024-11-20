@@ -8,8 +8,9 @@ using UI_WPF.Interfaces;
 using UI_WPF.ViewModel;
 using UI_WPF.Services;
 using UI_WPF.Containers;
+using WPFLocalizeExtension.Providers;
 
-namespace NextDesignerWPF.ViewModel
+namespace Authenticator.Components
 {
 
     public partial class ModalLoginViewModel : ViewModelBase
@@ -36,11 +37,12 @@ namespace NextDesignerWPF.ViewModel
             _navigationModalService = navigationModalService;
             _modalContainer = modalRepository;
             _authenticationService = authenticationService;
-            _navigationPageService = navigationPageService;
             if (User is null || User.Email == String.Empty) { 
                 User = authenticationService.UserData;
             }
-            User.Password = "";
+            User.Password = "";            
+            _navigationPageService = navigationPageService;
+
         }
 
         [RelayCommand]

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace NextDesignerWPF.Views
+namespace Authenticator.Components
 {
     /// <summary>
     /// Interaction logic for ModalLogin.xaml

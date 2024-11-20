@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Authenticator.Components 
-{ 
+namespace Authenticator.UI_WPF
+{
     /// <summary>
-    /// Interaction logic for ModalLogin.xaml
+    /// Logika interakcji dla klasy AuthenticatorMainPage.xaml
     /// </summary>
-    public partial class ModalPasswordChanged : UserControl
+    public partial class AuthenticatorMainPage : UserControl
     {
-        public ModalPasswordChanged()
+        public AuthenticatorMainPage()
         {
             InitializeComponent();
         }

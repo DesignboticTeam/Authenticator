@@ -4,7 +4,7 @@ using UI_WPF.Containers;
 using UI_WPF.Interfaces;
 using UI_WPF.Services;
 
-namespace NextDesignerWPF.ViewModel
+namespace Authenticator.Components
 {
     public partial class ModalPasswordChangedViewModel : ModalLoginViewModel
     {
