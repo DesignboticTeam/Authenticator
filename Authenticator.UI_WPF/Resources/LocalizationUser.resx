@@ -125,10 +125,6 @@
     <value>[m2]</value>
     <comment>+</comment>
   </data>
-  <data name="BuildingLine" xml:space="preserve">
-    <value>Building line</value>
-    <comment>+</comment>
-  </data>
   <data name="BuildingLine_Boundary" xml:space="preserve">
     <value>Boundary</value>
     <comment>+</comment>
@@ -139,157 +135,6 @@
   </data>
   <data name="BuildingLine_Name" xml:space="preserve">
     <value>Name</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingLine_Shape" xml:space="preserve">
-    <value>Geometry</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingLine_ShapeButtonContent" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="BuildingProperties_Label" xml:space="preserve">
-    <value>Building Dimensions</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone" xml:space="preserve">
-    <value>Building  Zone</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_AverageNumberOfLevels" xml:space="preserve">
-    <value>Average count</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_Boundary" xml:space="preserve">
-    <value>Boundary</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_BoundaryButtonContent" xml:space="preserve">
-    <value>Edit</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_BuildingDepthEW" xml:space="preserve">
-    <value>East-West axis depth</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_BuildingDepthNS" xml:space="preserve">
-    <value>North-South axis depth</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_BuildingLength" xml:space="preserve">
-    <value>Length</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_FloorLevelHeight" xml:space="preserve">
-    <value>Repetitive level height</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_BuildingPropertiesHeader" xml:space="preserve">
-    <value>Building dimensions</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_HeightsHeader" xml:space="preserve">
-    <value>Building height</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_LevelsHeader" xml:space="preserve">
-    <value>Levels</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_MaxAbsolutBuildingHeight" xml:space="preserve">
-    <value>Absolut maximum height</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_MaxNumberOfLevels" xml:space="preserve">
-    <value>Maximum level count</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_MaxRelativeBuildingHeight" xml:space="preserve">
-    <value>Maximum height</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_MinAverageBuildingHeight" xml:space="preserve">
-    <value>Minimal average height</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_MinBuildingHeight" xml:space="preserve">
-    <value>Minimum height</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_MinNumberOfLevels" xml:space="preserve">
-    <value>Minimium level count</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_Name" xml:space="preserve">
-    <value>Name</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_NetInternalAreaExternalWalls" xml:space="preserve">
-    <value>Thickness of external walls</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_NetInternalAreaHeader" xml:space="preserve">
-    <value>Net internal area</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_NetInternalAreaShaftRatio" xml:space="preserve">
-    <value>Shaft ratio</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_ParkingHallAreaPerSpace" xml:space="preserve">
-    <value>Parking hall area per one space</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_ParkingHeader" xml:space="preserve">
-    <value>Parking structure</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_ParkingSpaceAdditional" xml:space="preserve">
-    <value>Additional places</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_ParkingSpacePerFlatRatio" xml:space="preserve">
-    <value>Number of parking spaces per flat</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_ParkingSpacePerM1Ratio" xml:space="preserve">
-    <value>Number of parking spaces per 0-bedroom flat ratio</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_ParkingSpacePerM2Ratio" xml:space="preserve">
-    <value>Number of parking spaces per  1-bedroom flat ratio</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_ParkingSpacePerM3Ratio" xml:space="preserve">
-    <value>Number of parking spaces per 2-bedrooms flat ratio</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_ParkingSpacePerM4Ratio" xml:space="preserve">
-    <value>Number of parking spaces per  3-bedrooms flat ratio</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_ParkingSpacePerM5Ratio" xml:space="preserve">
-    <value>Number of parking spaces per  4-bedrooms flat ratio</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_RepetitveLevelHeight" xml:space="preserve">
-    <value>Repetitive level height</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_StructureHeader" xml:space="preserve">
-    <value>Flat structure</value>
-    <comment>+</comment>
-  </data>
-  <data name="BuildingZone_TopLevelHeight" xml:space="preserve">
-    <value>Top level height</value>
-    <comment>+</comment>
-  </data>
-  <data name="ButtonExampleProject" xml:space="preserve">
-    <value>Example project</value>
-    <comment>+</comment>
-  </data>
-  <data name="ButtonExampleProject_ToolTip" xml:space="preserve">
-    <value>Open example project from Kolega</value>
     <comment>+</comment>
   </data>
   <data name="ButtonNewProject" xml:space="preserve">
@@ -520,13 +365,6 @@
     <value>Start working with Kolega. Create or continue a project.</value>
     <comment>+</comment>
   </data>
-  <data name="PageStart_Number" xml:space="preserve">
-    <value>01</value>
-  </data>
-  <data name="PageStart_RecentProjectsTitle" xml:space="preserve">
-    <value>Recent projects</value>
-    <comment>+</comment>
-  </data>
   <data name="PageStart_Subtitle" xml:space="preserve">
     <value>Sub Test EN</value>
   </data>
@@ -588,9 +426,6 @@
   <data name="StructureDisplay_ParkingAreaProperty" xml:space="preserve">
     <value>Parking Space Area</value>
   </data>
-  <data name="BuildingZone_Add" xml:space="preserve">
-    <value>Add Building Zone</value>
-  </data>
   <data name="CheckZone_Add" xml:space="preserve">
     <value>Add Check Zone</value>
   </data>
@@ -624,23 +459,12 @@
   <data name="PageStart_NewsFeedSubTitle" xml:space="preserve">
     <value>Your new digital partner in design.</value>
   </data>
-  <data name="PageStart_NewsFeedTitle" xml:space="preserve">
-    <value>Meet Kolega.</value>
-  </data>
   <data name="PageStart_NewsFeedTitle1" xml:space="preserve">
     <value>Introducing Kolega</value>
     <comment>+</comment>
   </data>
   <data name="PageStart_NewsFeedTitle2" xml:space="preserve">
     <value>Embrace the Future</value>
-    <comment>+</comment>
-  </data>
-  <data name="PageStart_NewsFeedTitle3" xml:space="preserve">
-    <value>Join the Community Today!</value>
-    <comment>+</comment>
-  </data>
-  <data name="ButtonCancel" xml:space="preserve">
-    <value>Cancel</value>
     <comment>+</comment>
   </data>
   <data name="CommunicationWaitingLong" xml:space="preserve">
@@ -881,29 +705,6 @@
   <data name="ProjectData_TimeRequirements" xml:space="preserve">
     <value>Dayligth Settings</value>
   </data>
-  <data name="ButtonExampleProject1" xml:space="preserve">
-    <value>Simple Site Example Project</value>
-  </data>
-  <data name="ButtonExampleProject2" xml:space="preserve">
-    <value>Standard Site Example Project</value>
-  </data>
-  <data name="ButtonExampleProject3" xml:space="preserve">
-    <value>Complex Site Example Project</value>
-  </data>
-  <data name="BuildingZone_BuildingOrientationAngle" xml:space="preserve">
-    <value>Building orientation angle</value>
-  </data>
-  <data name="BuildingZone_BuildingOrientationAngleDeviation" xml:space="preserve">
-    <value>Acceptable building orientation angle deviation</value>
-  </data>
-  <data name="ButtonExampleProject1_Tooltip" xml:space="preserve">
-    <value>Open example project</value>
-    <comment>+</comment>
-  </data>
-  <data name="ButtonExampleProject2_Tooltip" xml:space="preserve">
-    <value>Open example project</value>
-    <comment>+</comment>
-  </data>
   <data name="ButtonExampleProject3_Tooltip" xml:space="preserve">
     <value>Open example project</value>
     <comment>+</comment>
@@ -921,9 +722,6 @@
   </data>
   <data name="TimeRequirementViewModel_TimeSpanToPassPreview" xml:space="preserve">
     <value>Time requierd                   </value>
-  </data>
-  <data name="BuildingZone_BuildingAtticHeight" xml:space="preserve">
-    <value>Roof attic height</value>
   </data>
   <data name="Flat0Bedroom" xml:space="preserve">
     <value>0-bedroom</value>
@@ -949,18 +747,6 @@
   <data name="PageSolution_StarOnly" xml:space="preserve">
     <value>Show starred only</value>
   </data>
-  <data name="BuildingZone_BuildingHeightFloor" xml:space="preserve">
-    <value>Floor heigth</value>
-  </data>
-  <data name="BuildingZone_TopFloorLevelHeight" xml:space="preserve">
-    <value>Top floor level heigth</value>
-  </data>
-  <data name="BuildingZone_GroundFloorLevelHeight" xml:space="preserve">
-    <value>Groundfloor heigth</value>
-  </data>
-  <data name="BuildingZone_BuildingNumberOfLevels" xml:space="preserve">
-    <value>Number of levels</value>
-  </data>
   <data name="ProjectData_FlatsAreaRatio" xml:space="preserve">
     <value>Flat area ratio</value>
   </data>
@@ -971,15 +757,6 @@
     <value>Area Settings</value>
   </data>
   <data name="ageStart_ButtonNewsFeed" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BuildingZone_BuildingGroundFloor" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BuildingZone_BuildingHeightFloorLast" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BuildingZone_BuildingLevelHeight" xml:space="preserve">
     <value />
   </data>
   <data name="CheckZone_BuildingCoverageRatio" xml:space="preserve">

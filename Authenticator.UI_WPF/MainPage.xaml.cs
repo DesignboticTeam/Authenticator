@@ -32,6 +32,8 @@ namespace Authenticator.UI_WPF
         public MainPage(PageDataTempleSelector pageSelector)
         {
             InitializeComponent();
+            
+
             _pageSelector = pageSelector;  
             MainContent.ContentTemplateSelector = pageSelector;
             //TODO make separate selector

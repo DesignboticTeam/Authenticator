@@ -4,9 +4,9 @@ using System.Text.Json;
 
 namespace AuthenticatorConnector.Configuration
 {
-    public static class EncryptedJsonConfigurationExtensions
+    public static class CustomConfigurationExtensions
     {
-        public static IConfigurationBuilder AddEncryptedJsonFile(this IConfigurationBuilder builder, string path, string privateKey)
+        public static IConfigurationBuilder AddCustomConfigurationJsonFile(this IConfigurationBuilder builder, string path, string ToolMode)
         {
             if (builder == null)
                 throw new ArgumentNullException(nameof(builder));
@@ -14,34 +14,35 @@ namespace AuthenticatorConnector.Configuration
             if (string.IsNullOrEmpty(path))
                 throw new ArgumentException("File path must be a non-empty string.", nameof(path));
 
-            if (string.IsNullOrEmpty(privateKey))
-                throw new ArgumentException("Private key must be provided.", nameof(privateKey));
+            if (string.IsNullOrEmpty(ToolMode))
+                throw new ArgumentException("Tool mode must be provided.", nameof(ToolMode));
 
-            var source = new EncryptedJsonConfigurationSource
+            var source = new CustomConfigurationSource
             {
                 Path = path,
                 Optional = false,
                 ReloadOnChange = false,
-                //PrivateKey = privateKey
+                ToolMode = ToolMode
             };
 
             builder.Add(source);
             return builder;
         }
     }
-    public class EncryptedJsonConfigurationSource : FileConfigurationSource
+    public class CustomConfigurationSource : FileConfigurationSource
     {
+        public string ToolMode { get; set; }
         public override IConfigurationProvider Build(IConfigurationBuilder builder)
         {
             EnsureDefaults(builder);
-            return new EncryptedJsonConfigurationProvider(this);
+            return new CustomConfigurationProvider(this, ToolMode);
         }
     }
-        public class EncryptedJsonConfigurationProvider : FileConfigurationProvider
+        public class CustomConfigurationProvider : FileConfigurationProvider
         {
-            string _privateKey => "DesingboticTools";
-            public EncryptedJsonConfigurationProvider(EncryptedJsonConfigurationSource source) : base(source) {
-            
+            string _toolMode { get; set; }
+            public CustomConfigurationProvider(CustomConfigurationSource source, string toolMode) : base(source) {
+                _toolMode = toolMode;
             }
 
             public override void Load(Stream stream)
@@ -50,7 +51,7 @@ namespace AuthenticatorConnector.Configuration
                 {
                     using var reader = new StreamReader(stream);
                     string encryptedContent = reader.ReadToEnd();
-                    string decryptedContent = Encryptor.Encryptor.DecryptString(encryptedContent, _privateKey);
+                    string decryptedContent = Encryptor.Encryptor.DecryptString(encryptedContent, _toolMode);
                     Data = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
                     using var doc = JsonDocument.Parse(decryptedContent);
                     VisitElement(doc.RootElement);

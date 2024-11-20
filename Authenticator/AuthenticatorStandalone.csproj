@@ -14,9 +14,13 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="customsettings.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="customsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -47,25 +51,36 @@
 	<Import Project="..\AuthenticatorConnector\AuthenticatorConnector.projitems" Label="Shared" />
 	
 	<ItemGroup>
-	  <Compile Remove="C:\Users\konra\Documents\repos\Authenticator\AuthenticatorConnector\Resources\Resource.Designer.cs" />
+	  <Compile Remove="C:\Users\konra\Documents\repos\Authenticator\AuthenticatorConnector\Resources\Resource.Designer.cs"/>
 	</ItemGroup>
 
 	<ItemGroup>
-		<AppSettings Include="$(ProjectDir)appsettings.json" />
-		<EncryptedSettings Include="$(ProjectDir)appsettings.enc" />
 		<EncryptionKey Include="DesingboticTools" />
 
+		<AppSettings Include="$(ProjectDir)appsettings.json" />
+		<EncryptedSettings Include="$(ProjectDir)appsettings.enc" />
+
+		<CustomSettings Include="$(ProjectDir)customsettings.json" />
+		<EncryptedCustomSettings Include="$(ProjectDir)customsettings.enc" />
+	
 	</ItemGroup>
 
-	<!-- Build ConfigEncryptor if needed 
+	<ItemGroup>
+	  <None Update="customsettings.enc">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<!-- Build ConfigEncryptor if needed -->
 	<Target Name="BuildConfigEncryptor">
 		<MSBuild Projects="$(SolutionDir)UserSettingsUtility\UserSettingsUtility.csproj" Targets="Build" Properties="Configuration=$(Configuration)" />
 	</Target>
--->
+
 	<!-- Encrypt the configuration file -->
 	<Target Name="EncryptConfig" AfterTargets="PostBuildEvent">
 		<!-- Run the encryption utility -->
-		<Exec Command='dotnet "$(SolutionDir)UserSettingsUtility\bin\Debug\net8.0\UserSettingsUtility.dll" "@(AppSettings)" "@(EncryptedSettings)" "@(EncryptionKey)"' />
+		<Exec Command="dotnet &quot;$(SolutionDir)UserSettingsUtility\bin\Debug\net8.0\UserSettingsUtility.dll&quot; &quot;@(AppSettings)&quot; &quot;@(EncryptedSettings)&quot; &quot;@(EncryptionKey)&quot;" />
+		<Exec Command="dotnet &quot;$(SolutionDir)UserSettingsUtility\bin\Debug\net8.0\UserSettingsUtility.dll&quot; &quot;@(CustomSettings)&quot; &quot;@(EncryptedCustomSettings)&quot; &quot;@(EncryptionKey)&quot;" />
 
 		<!-- Delete the plain appsettings.json from the output directory 
 		<Delete Files="$(OutDir)appsettings.json" />

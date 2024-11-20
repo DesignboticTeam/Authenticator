@@ -10,9 +10,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Bootstrap\AuthenticatorBootstrap.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Configuration\SpecialConfigurator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration\CustomConfigurator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration\CustomSettingsPostConfigure.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryptor\Encryptor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Resources\Resource.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\db_tools_sunligth_icon.ico">
@@ -35,9 +35,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.resx">
-      <Generator>
-      </Generator>
-    </EmbeddedResource>
+    <Folder Include="$(MSBuildThisFileDirectory)DataModels\" />
   </ItemGroup>
 </Project>

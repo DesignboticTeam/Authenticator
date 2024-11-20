@@ -1,5 +1,6 @@
 ﻿using Authenticator.Components;
 using Authenticator.UI_WPF;
+using Authenticator.UI_WPF.Bootstrap;
 using AuthenticatorConnector.Bootstrap;
 using Connector.Bootstraper;
 using Connector.Interfaces;
@@ -7,6 +8,7 @@ using MahApps.Metro.Controls.Dialogs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Serilog;
 using System.Reflection;
 
@@ -36,37 +38,10 @@ namespace Authenticator
             BootstrapLogger.InitializeLogger();
 
             string[] args = [];
-            var builder = AuthenticatorBootstrap.CreateBuilder(null)
+            var builder = AuthenticatorBootstrap.CreateBuilderStandalone(null)
                 .ConfigureServices(services =>
                 {
-                    BootstrapUI.ConfigureAuthentication(services);
-
-
-                    // services.AddSingleton<IApplicationService, RevitApplication>();
-                    //TODO move to UI boot
-                    services.AddSingleton<MainWindow>();
-                    services.AddSingleton<MainPage>();
-
-                    services.AddSingleton<MainPageViewModel>();
-
-                    services.AddTransient<AuthenticatorMainPage>();
-                    services.AddTransient<AuthenticatorMainPageViewModel>();
-
-                    services.AddSingleton<ViewModelFactory>();
-
-                    //Nav structure init
-                    services.AddSingleton<PageDataTempleSelector>();
-                    var mapper = new ViewModelToViewMapper();
-                    
-                    mapper.RegisterMapping<MainPageViewModel, MainPage>();
-                    mapper.RegisterMapping<AuthenticatorMainPageViewModel, AuthenticatorMainPage>();
-
-                    mapper.RegisterMapping<ModalLoginViewModel, ModalLogin>();
-                    mapper.RegisterMapping<ModalPasswordChangedViewModel, ModalPasswordChanged>();
-                    mapper.RegisterMapping<ModalRegisterViewModel, ModalRegister>();
-                    mapper.RegisterMapping<ModalRegisteredViewModel, ModalRegistered>();
-
-                    services.AddSingleton<IViewModelToViewMapper>(mapper);
+                    BootstrapAuthenticatorUI.ConfigureServicesStandalone(services);
                 });
 
             try {
