@@ -51,7 +51,7 @@
 	<Import Project="..\AuthenticatorConnector\AuthenticatorConnector.projitems" Label="Shared" />
 	
 	<ItemGroup>
-	  <Compile Remove="C:\Users\konra\Documents\repos\Authenticator\AuthenticatorConnector\Resources\Resource.Designer.cs" />
+	  <Compile Remove="C:\Users\konra\Documents\repos\Authenticator\AuthenticatorConnector\Resources\Resource.Designer.cs"/>
 	</ItemGroup>
 
 	<ItemGroup>
