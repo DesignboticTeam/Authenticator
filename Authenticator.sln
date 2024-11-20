@@ -19,7 +19,9 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AuthenticatorConnector", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticatorTests", "AuthenticatorTests\AuthenticatorTests.csproj", "{CDE2881D-5A03-4988-B9FF-1B33DC944C98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserSettingsUtility", "UserSettingsUtility\UserSettingsUtility.csproj", "{E7984249-7138-4B64-874D-DE63A6F05FBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserSettingsUtility", "UserSettingsUtility\UserSettingsUtility.csproj", "{E7984249-7138-4B64-874D-DE63A6F05FBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticatorWPF", "AuthenticatorLibrary\AuthenticatorWPF.csproj", "{BF3B6BEB-A983-4E77-8BF0-119991F2D22B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,14 @@ Global
 		{E7984249-7138-4B64-874D-DE63A6F05FBE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7984249-7138-4B64-874D-DE63A6F05FBE}.Release|x64.ActiveCfg = Release|Any CPU
 		{E7984249-7138-4B64-874D-DE63A6F05FBE}.Release|x64.Build.0 = Release|Any CPU
+		{BF3B6BEB-A983-4E77-8BF0-119991F2D22B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF3B6BEB-A983-4E77-8BF0-119991F2D22B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF3B6BEB-A983-4E77-8BF0-119991F2D22B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BF3B6BEB-A983-4E77-8BF0-119991F2D22B}.Debug|x64.Build.0 = Debug|Any CPU
+		{BF3B6BEB-A983-4E77-8BF0-119991F2D22B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3B6BEB-A983-4E77-8BF0-119991F2D22B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF3B6BEB-A983-4E77-8BF0-119991F2D22B}.Release|x64.ActiveCfg = Release|Any CPU
+		{BF3B6BEB-A983-4E77-8BF0-119991F2D22B}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,12 +96,14 @@ Global
 		{1D188F80-6CBC-422C-A19B-851FB1C51AD5} = {A98DAE47-322E-4037-934A-3133F433FDDB}
 		{C9EA79DE-F6AC-4772-97FC-86E816E441DE} = {BFC36C77-7762-45E5-BB2D-D8E921FB5AA4}
 		{E7984249-7138-4B64-874D-DE63A6F05FBE} = {BFC36C77-7762-45E5-BB2D-D8E921FB5AA4}
+		{BF3B6BEB-A983-4E77-8BF0-119991F2D22B} = {BFC36C77-7762-45E5-BB2D-D8E921FB5AA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {407B9CF9-9D94-446E-BF80-AB19B0F4438C}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AuthenticatorConnector\AuthenticatorConnector.projitems*{7177769d-db4a-4408-b262-1facac6cfae1}*SharedItemsImports = 13
+		AuthenticatorConnector\AuthenticatorConnector.projitems*{bf3b6beb-a983-4e77-8bf0-119991f2d22b}*SharedItemsImports = 5
 		AuthenticatorConnector\AuthenticatorConnector.projitems*{c9ea79de-f6ac-4772-97fc-86e816e441de}*SharedItemsImports = 5
 		AuthenticatorConnector\AuthenticatorConnector.projitems*{e7984249-7138-4b64-874d-de63a6f05fbe}*SharedItemsImports = 5
 	EndGlobalSection

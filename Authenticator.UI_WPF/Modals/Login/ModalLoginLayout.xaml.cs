@@ -9,6 +9,17 @@ namespace Authenticator.Components
     /// </summary>
     public partial class ModalLoginLayout : ContentControl
     {
+
+        public int ModalWidth
+        {
+            get { return (int)GetValue(ModalWidthProperty); }
+            set { SetValue(ModalWidthProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ModalWidth.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ModalWidthProperty =
+            DependencyProperty.Register("ModalWidth", typeof(int), typeof(ModalLoginLayout), new PropertyMetadata(300));
+
         public string ModalTitle
         {
             get { return (string)GetValue(ModalTitleProperty); }
@@ -34,23 +45,25 @@ namespace Authenticator.Components
         public static readonly DependencyProperty ModalNumberProperty =
             DependencyProperty.Register("ModalNumber", typeof(string), typeof(ModalLoginLayout), new PropertyMetadata(string.Empty));
 
-
-
         public string IconPath
         {
-            get { return (string)GetValue(IconPathProperty); }
-            set { SetValue(IconPathProperty, value); }
+            get { 
+                return (string)GetValue(IconPathProperty); 
+            }
+            set { 
+                SetValue(IconPathProperty, value); 
+            }
         }
 
         // Using a DependencyProperty as the backing store for IconPath.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty IconPathProperty =
             DependencyProperty.Register("IconPath", typeof(string), typeof(ModalLoginLayout), new PropertyMetadata(string.Empty));
 
-
-
         public ModalLoginLayout()
         {
             InitializeComponent();
+            
+            
         }
     }
 }

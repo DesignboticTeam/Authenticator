@@ -21,7 +21,7 @@ namespace Authenticator.UI_WPF.Bootstrap
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection ConfigureServicesStandalone(IServiceCollection services)
+        public static IServiceCollection ConfigureServicesStandalone(this IServiceCollection services)
         {
             // services.AddSingleton<IApplicationService, RevitApplication>();
 

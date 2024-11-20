@@ -1,5 +1,4 @@
-﻿using Authenticator.UI_WPF.Bootstrap;
-using AuthenticatorConnector.Configuration;
+﻿using AuthenticatorConnector.Configuration;
 using Connector;
 using Connector.DataModels;
 using Connector.Exceptions;
@@ -10,16 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using NextDesignerAnalysis.Daylight;
-using NextDesignerAnalysis.Interfaces;
-using NextDesignerElements;
 using Serilog;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
-using UI_WPF.Interfaces;
 
 namespace AuthenticatorConnector.Bootstrap
 {
@@ -50,8 +42,8 @@ namespace AuthenticatorConnector.Bootstrap
                         .AddCustomConfigurationJsonFile("appsettings.enc", "DesingboticTools")
                         .AddCustomConfigurationJsonFile("customsettings.enc", "DesingboticTools")
 
-                        .AddEnvironmentVariables()
-                        .Build();
+                        .AddEnvironmentVariables();
+                        //.Build();
 
                   //  config.AddEncryptedJsonFile(Path.Combine(executionFolder, "appsettings.json"), "DesignboticTools").Build();
                 })

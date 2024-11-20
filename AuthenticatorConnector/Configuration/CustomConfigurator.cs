@@ -6,6 +6,7 @@ namespace AuthenticatorConnector.Configuration
 {
     public static class CustomConfigurationExtensions
     {
+        //TODO Move to connector
         public static IConfigurationBuilder AddCustomConfigurationJsonFile(this IConfigurationBuilder builder, string path, string ToolMode)
         {
             if (builder == null)
