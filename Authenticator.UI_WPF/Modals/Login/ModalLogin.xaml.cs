@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Drawing;
+using System.Windows.Controls;
 using WPFLocalizeExtension.Providers;
 
 namespace Authenticator.Components
