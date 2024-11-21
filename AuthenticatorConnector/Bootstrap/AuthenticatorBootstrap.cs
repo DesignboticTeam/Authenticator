@@ -62,7 +62,7 @@ namespace AuthenticatorConnector.Bootstrap
 
             return host;
         }
-
+            
         /// <summary>
         /// Configurates UI for Authentication as Service in App. NOTE: Use last after all UI Services are added.
         /// </summary>
