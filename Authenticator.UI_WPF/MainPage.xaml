@@ -33,7 +33,6 @@
         <StackPanel>
             <TextBlock HorizontalAlignment="Center" Text="Main Page"></TextBlock>
 
-            <TextBlock HorizontalAlignment="Center" Text="MainContent"></TextBlock>
             <ContentControl 
                 Name="MainContent"
                 Content="{Binding CurrentPageViewModel}"
@@ -45,8 +44,11 @@
                         Name="MainModalContent"
                         Visibility= "{Binding IsModalOpen, Converter={StaticResource BooleanToVisibilityConverter}}" 
                         Content= "{Binding CurrentModalViewModel}" />
-            
-        </StackPanel>
 
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <TextBlock Text="Version: "></TextBlock>
+                <TextBlock Text="{Binding CurrentPageViewModel.Version}"></TextBlock>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>
