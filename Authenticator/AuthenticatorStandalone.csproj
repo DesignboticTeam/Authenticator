@@ -84,9 +84,12 @@
 		<Exec Command="&quot;$(TargetDir)UserSettingsUtility.exe&quot; &quot;@(CustomSettings)&quot; &quot;@(EncryptedCustomSettings)&quot; &quot;@(EncryptionKey)&quot;" />
 
 
-		<Delete Files="$(TargetDir)UserSettingsUtility.exe;
+		<Delete Files="
+				$(TargetDir)UserSettingsUtility.exe;
 				$(TargetDir)UserSettingsUtility.dll;
-				$(TargetDir)UserSettingsUtility.deps.json;						
+				$(TargetDir)UserSettingsUtility.deps.json;
+				$(TargetDir)UserSettingsUtility.pdb;
+				$(TargetDir)UserSettingsUtility.runtimeconfig.json;
 				" />
 
 		<!-- Delete the plain appsettings.json from the output directory 
