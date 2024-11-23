@@ -19,10 +19,10 @@
 
   <ItemGroup>
     <EmbeddedResource Include="customsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
@@ -44,6 +44,7 @@
 	
 	<ItemGroup>
 	  <ProjectReference Include="..\..\Connector\Connector\Connector.csproj" />
+	  <ProjectReference Include="..\..\Connector\UserSettingsUtility\UserSettingsUtility.csproj" />
 	  <ProjectReference Include="..\..\UI_WPF\UI_WPF\UI_WPF.csproj" />
 	  <ProjectReference Include="..\Authenticator.UI_WPF\Authenticator.UI_WPF.csproj" />
 	</ItemGroup>
@@ -51,23 +52,23 @@
 	<Import Project="..\AuthenticatorConnector\AuthenticatorConnector.projitems" Label="Shared" />
 	
 	<ItemGroup>
-	  <Compile Remove="C:\Users\konra\Documents\repos\Authenticator\AuthenticatorConnector\Resources\Resource.Designer.cs"/>
+	  <Compile Remove="C:\Users\konra\Documents\repos\Authenticator\AuthenticatorConnector\Resources\Resource.Designer.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<EncryptionKey Include="DesingboticTools" />
 
 		<AppSettings Include="$(ProjectDir)appsettings.json" />
-		<EncryptedSettings Include="$(ProjectDir)appsettings.enc" />
+		<EncryptedSettings Include="$(TargetDir)appsettings.enc" />
 
 		<CustomSettings Include="$(ProjectDir)customsettings.json" />
-		<EncryptedCustomSettings Include="$(ProjectDir)customsettings.enc" />
+		<EncryptedCustomSettings Include="$(TargetDir)customsettings.enc" />
 	
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Update="customsettings.enc">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
 
@@ -79,14 +80,22 @@
 	<!-- Encrypt the configuration file -->
 	<Target Name="EncryptConfig" AfterTargets="PostBuildEvent">
 		<!-- Run the encryption utility -->
-		<Exec Command="dotnet &quot;$(SolutionDir)UserSettingsUtility\bin\Debug\net8.0\UserSettingsUtility.dll&quot; &quot;@(AppSettings)&quot; &quot;@(EncryptedSettings)&quot; &quot;@(EncryptionKey)&quot;" />
-		<Exec Command="dotnet &quot;$(SolutionDir)UserSettingsUtility\bin\Debug\net8.0\UserSettingsUtility.dll&quot; &quot;@(CustomSettings)&quot; &quot;@(EncryptedCustomSettings)&quot; &quot;@(EncryptionKey)&quot;" />
+		<Exec Command="&quot;$(TargetDir)UserSettingsUtility.exe&quot; &quot;@(AppSettings)&quot; &quot;@(EncryptedSettings)&quot; &quot;@(EncryptionKey)&quot;" />
+		<Exec Command="&quot;$(TargetDir)UserSettingsUtility.exe&quot; &quot;@(CustomSettings)&quot; &quot;@(EncryptedCustomSettings)&quot; &quot;@(EncryptionKey)&quot;" />
+
+
+		<Delete Files="
+				$(TargetDir)UserSettingsUtility.exe;
+				$(TargetDir)UserSettingsUtility.dll;
+				$(TargetDir)UserSettingsUtility.deps.json;
+				$(TargetDir)UserSettingsUtility.pdb;
+				$(TargetDir)UserSettingsUtility.runtimeconfig.json;
+				" />
 
 		<!-- Delete the plain appsettings.json from the output directory 
 		<Delete Files="$(OutDir)appsettings.json" />
 -->
-		<!-- Copy the encrypted appsettings.enc to the output directory -->
-		<Copy SourceFiles="@(EncryptedSettings)" DestinationFolder="$(OutDir)" />
+
 	</Target>
 
 </Project>

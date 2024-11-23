@@ -1,5 +1,5 @@
-﻿using AuthenticatorConnector.Configuration;
-using Connector;
+﻿using Connector;
+using Connector.Configuration;
 using Connector.DataModels;
 using Connector.Exceptions;
 using Connector.Interfaces;
@@ -55,6 +55,7 @@ namespace AuthenticatorConnector.Bootstrap
                     services.Configure<CustomSettings>(hostingContext.Configuration.GetSection("CustomSettings"));
 
                     services.AddSingleton<IPostConfigureOptions<CustomSettings>, CustomSettingsPostConfigure>();
+                    services.AddSingleton<IPostConfigureOptions<AppSettings>, AppSettingsPostConfigure>();
 
                     services.ConfigureServicesAuthenticator();
                     services.AddNeededServicesIfNotAdded();
@@ -73,7 +74,9 @@ namespace AuthenticatorConnector.Bootstrap
         public static IServiceCollection ConfigureServicesAuthenticator(this IServiceCollection services, bool ensureNeedServices = true)
         {
             //Add AuthModals
+
             services.AddSingleton<IAuthenticationService, FirebaseAuthenticationService>();
+            services.TryAddSingleton<IPostConfigureOptions<CustomSettings>, CustomSettingsPostConfigure>();
 
             //Ensure needed services
             if (ensureNeedServices)

@@ -1,6 +1,6 @@
 ﻿using Authenticator.UI_WPF.Bootstrap;
 using AuthenticatorConnector.Bootstrap;
-using AuthenticatorConnector.Configuration;
+using Connector.Configuration;
 using Connector.DataModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
