@@ -10,6 +10,7 @@
       xmlns:local="clr-namespace:Authenticator.Components"
 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Background="White"
 
       xmlns:m ="clr-namespace:UI_WPF.Localization;assembly=UI_WPF"             
       xmlns:lex="http://wpflocalizeextension.codeplex.com"

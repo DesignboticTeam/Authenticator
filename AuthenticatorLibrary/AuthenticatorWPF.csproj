@@ -4,13 +4,20 @@
 	  <TargetFrameworks>net472; net8.0-windows</TargetFrameworks>
 	  <ImplicitUsings>enable</ImplicitUsings>
 	  <LangVersion>12</LangVersion>
+	  <Configurations>Debug;Release</Configurations>
 
 	  <Nullable>enable</Nullable>
 	  <UseWPF>true</UseWPF>
 
   </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<DebugType>none</DebugType>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
 
-  <ItemGroup>
+	<ItemGroup>
     <ProjectReference Include="..\..\Connector\Connector\Connector.csproj" />
     <ProjectReference Include="..\..\UI_WPF\UI_WPF\UI_WPF.csproj" />
     <ProjectReference Include="..\Authenticator.UI_WPF\Authenticator.UI_WPF.csproj" />
