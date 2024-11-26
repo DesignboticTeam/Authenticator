@@ -30,17 +30,7 @@
     <Page Include="App.xaml" />
   </ItemGroup>
 	
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
-		<PackageReference Include="Serilog" Version="4.0.0" />
-		<PackageReference Include="Serilog.Enrichers.CallerInfo" Version="1.0.4" />
-		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
-		<PackageReference Include="Serilog.Settings.Configuration" Version="8.0.2" />
-		<PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
-		<PackageReference Include="Serilog.Sinks.Debug" Version="3.0.0" />
-		<PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
-		<PackageReference Include="WPFLocalizeExtension" Version="3.10.0" />		
-	</ItemGroup>
+
 	
 	<ItemGroup>
 	  <ProjectReference Include="..\..\Connector\Connector\Connector.csproj" />
@@ -84,13 +74,7 @@
 		<Exec Command="&quot;$(TargetDir)UserSettingsUtility.exe&quot; &quot;@(CustomSettings)&quot; &quot;@(EncryptedCustomSettings)&quot; &quot;@(EncryptionKey)&quot;" />
 
 
-		<Delete Files="
-				$(TargetDir)UserSettingsUtility.exe;
-				$(TargetDir)UserSettingsUtility.dll;
-				$(TargetDir)UserSettingsUtility.deps.json;
-				$(TargetDir)UserSettingsUtility.pdb;
-				$(TargetDir)UserSettingsUtility.runtimeconfig.json;
-				" />
+		<Delete Files="&#xD;&#xA;				$(TargetDir)UserSettingsUtility.exe;&#xD;&#xA;				$(TargetDir)UserSettingsUtility.dll;&#xD;&#xA;				$(TargetDir)UserSettingsUtility.deps.json;&#xD;&#xA;				$(TargetDir)UserSettingsUtility.pdb;&#xD;&#xA;				$(TargetDir)UserSettingsUtility.runtimeconfig.json;&#xD;&#xA;				" />
 
 		<!-- Delete the plain appsettings.json from the output directory 
 		<Delete Files="$(OutDir)appsettings.json" />

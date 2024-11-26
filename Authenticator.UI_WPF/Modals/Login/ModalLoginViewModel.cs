@@ -47,6 +47,8 @@ namespace Authenticator.Components
             //IconPath = settings.Value.FullLogoPath;
         }
 
+
+
         [RelayCommand]
         public void CloseModal()
         {

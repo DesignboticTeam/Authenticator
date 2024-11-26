@@ -62,7 +62,7 @@
 
                         <Image Width="auto" 
                                Height="35"
-                               Source="{Binding LogoPath, ElementName= root, Mode=OneWay, Converter={StaticResource StringToImageSourceConverter}}" 
+                               Source="{Binding IconPath, ElementName= root, Mode=OneWay, Converter={StaticResource StringToImageSourceConverter}}" 
                                Margin="0,20,0,20" />
 
                         <TextBlock 
