@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Serilog;
+//using Serilog;
 using System.IO;
 using System.Reflection;
 
@@ -47,7 +47,7 @@ namespace AuthenticatorConnector.Bootstrap
 
                   //  config.AddEncryptedJsonFile(Path.Combine(executionFolder, "appsettings.json"), "DesignboticTools").Build();
                 })
-                .UseSerilog()
+                //.UseSerilog()
                 .ConfigureServices((hostingContext, services) =>
                 {
 

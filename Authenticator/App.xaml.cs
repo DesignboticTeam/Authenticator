@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Serilog;
+//using Serilog;
 using System.Reflection;
 
 //using System.Runtime.InteropServices.JavaScript;
@@ -45,11 +45,11 @@ namespace Authenticator
                 });
 
             try {
-                Log.Information("Building up");
+                //Log.Information("Building up");
                 AppHost = builder.Build();
             }
             catch (Exception ex) {
-                Log.Fatal(ex, "Application start-up failed");
+                //Log.Fatal(ex, "Application start-up failed");
                 return;
             }
             finally {
@@ -114,7 +114,7 @@ namespace Authenticator
             await AppHost.StopAsync();
 
             AppHost.Dispose();
-            Log.CloseAndFlush(); // Ensure to flush and close the log
+            //Log.CloseAndFlush(); // Ensure to flush and close the log
             base.OnExit(e);
         }
     }
