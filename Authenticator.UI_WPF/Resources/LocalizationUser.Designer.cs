@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Authenticator.UI_WPF.Resources {
+namespace AuthenticatorWPFLibrary.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Authenticator.UI_WPF.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Authenticator.UI_WPF.Resources.LocalizationUser", typeof(LocalizationUser).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AuthenticatorWPFLibrary.Resources.LocalizationUser", typeof(LocalizationUser).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
