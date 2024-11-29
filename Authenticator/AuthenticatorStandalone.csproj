@@ -33,10 +33,7 @@
 
 	
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Connector\Connector\Connector.csproj" />
 	  <ProjectReference Include="..\..\Connector\UserSettingsUtility\UserSettingsUtility.csproj" />
-	  <ProjectReference Include="..\..\UI_WPF\UI_WPF\UI_WPF.csproj" />
-	  <ProjectReference Include="..\Authenticator.UI_WPF\Authenticator.UI_WPF.csproj" />
 	</ItemGroup>
 	
 	<Import Project="..\AuthenticatorConnector\AuthenticatorConnector.projitems" Label="Shared" />
@@ -70,11 +67,23 @@
 	<!-- Encrypt the configuration file -->
 	<Target Name="EncryptConfig" AfterTargets="PostBuildEvent">
 		<!-- Run the encryption utility -->
+		
+		<!--
+		<Exec Command="dotnet &quot;$(TargetDir)UserSettingsUtility.dll&quot; &quot;@(AppSettings)&quot; &quot;@(EncryptedCustomSettings)&quot; &quot;@(EncryptionKey)&quot;" />
+		<Exec Command="dotnet &quot;$(TargetDir)UserSettingsUtility.dll&quot; &quot;@(CustomSettings)&quot; &quot;@(EncryptedCustomSettings)&quot; &quot;@(EncryptionKey)&quot;" />
+-->
 		<Exec Command="&quot;$(TargetDir)UserSettingsUtility.exe&quot; &quot;@(AppSettings)&quot; &quot;@(EncryptedSettings)&quot; &quot;@(EncryptionKey)&quot;" />
 		<Exec Command="&quot;$(TargetDir)UserSettingsUtility.exe&quot; &quot;@(CustomSettings)&quot; &quot;@(EncryptedCustomSettings)&quot; &quot;@(EncryptionKey)&quot;" />
 
 
-		<Delete Files="&#xD;&#xA;				$(TargetDir)UserSettingsUtility.exe;&#xD;&#xA;				$(TargetDir)UserSettingsUtility.dll;&#xD;&#xA;				$(TargetDir)UserSettingsUtility.deps.json;&#xD;&#xA;				$(TargetDir)UserSettingsUtility.pdb;&#xD;&#xA;				$(TargetDir)UserSettingsUtility.runtimeconfig.json;&#xD;&#xA;				" />
+
+
+<Delete Files="&#xD;&#xA;				
+			$(TargetDir)UserSettingsUtility.exe;&#xD;&#xA;				
+			$(TargetDir)UserSettingsUtility.dll;&#xD;&#xA;				
+			$(TargetDir)UserSettingsUtility.deps.json;&#xD;&#xA;				
+			$(TargetDir)UserSettingsUtility.pdb;&#xD;&#xA;				
+			$(TargetDir)UserSettingsUtility.runtimeconfig.json;&#xD;&#xA;" />
 
 		<!-- Delete the plain appsettings.json from the output directory 
 		<Delete Files="$(OutDir)appsettings.json" />
