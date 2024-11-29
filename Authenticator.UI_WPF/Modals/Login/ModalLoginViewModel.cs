@@ -9,6 +9,8 @@ using UI_WPF.ViewModel;
 using UI_WPF.Services;
 using UI_WPF.Containers;
 using WPFLocalizeExtension.Providers;
+using Microsoft.Extensions.Options;
+using System.Resources;
 
 namespace Authenticator.Components
 {
@@ -31,7 +33,7 @@ namespace Authenticator.Components
         [ObservableProperty]
         protected string _status;
 
-        public ModalLoginViewModel(IAuthenticationService authenticationService, INavigationService navigationPageService, NavigationModalService navigationModalService, ModalContainer modalRepository)
+        public ModalLoginViewModel(IAuthenticationService authenticationService, INavigationService navigationPageService, NavigationModalService navigationModalService, ModalContainer modalRepository, IOptions<AppSettings> settings)
         {
             Name = "ModalLogin"; //Can be in VMbase -> Modlog - viewmodel
             _navigationModalService = navigationModalService;
@@ -42,8 +44,10 @@ namespace Authenticator.Components
             }
             User.Password = "";            
             _navigationPageService = navigationPageService;
-
+            //IconPath = settings.Value.FullLogoPath;
         }
+
+
 
         [RelayCommand]
         public void CloseModal()
@@ -84,9 +88,9 @@ namespace Authenticator.Components
             switch (status) {
                 case LoginStatus.Valid: {
                         Status = "Logged In";
-                        Task.Delay(2000);
+                        Task.Delay(1000);
 
-                        //TODO Consider injeting custom behaviour
+                        //TODO Consider injecting custom behaviour
 
                         //_navigationPageService.NavigateTo<PageStartViewModel>();
                         _modalContainer.Close();
@@ -105,7 +109,7 @@ namespace Authenticator.Components
                         break;
                 }
                 case LoginStatus.Error: {
-                        Status = "Error";
+                        Status = "Error: " + e.Data.ToString();
                         break;
                     }
                 case LoginStatus.Expired: {

@@ -1,6 +1,5 @@
-﻿using Authenticator.UI_WPF.Bootstrap;
-using AuthenticatorConnector.Configuration;
-using Connector;
+﻿using Connector;
+using Connector.Configuration;
 using Connector.DataModels;
 using Connector.Exceptions;
 using Connector.Interfaces;
@@ -10,16 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using NextDesignerAnalysis.Daylight;
-using NextDesignerAnalysis.Interfaces;
-using NextDesignerElements;
-using Serilog;
-using System;
-using System.Collections.Generic;
+//using Serilog;
 using System.IO;
 using System.Reflection;
-using System.Text;
-using UI_WPF.Interfaces;
 
 namespace AuthenticatorConnector.Bootstrap
 {
@@ -50,12 +42,12 @@ namespace AuthenticatorConnector.Bootstrap
                         .AddCustomConfigurationJsonFile("appsettings.enc", "DesingboticTools")
                         .AddCustomConfigurationJsonFile("customsettings.enc", "DesingboticTools")
 
-                        .AddEnvironmentVariables()
-                        .Build();
+                        .AddEnvironmentVariables();
+                        //.Build();
 
                   //  config.AddEncryptedJsonFile(Path.Combine(executionFolder, "appsettings.json"), "DesignboticTools").Build();
                 })
-                .UseSerilog()
+                //.UseSerilog()
                 .ConfigureServices((hostingContext, services) =>
                 {
 
@@ -63,6 +55,7 @@ namespace AuthenticatorConnector.Bootstrap
                     services.Configure<CustomSettings>(hostingContext.Configuration.GetSection("CustomSettings"));
 
                     services.AddSingleton<IPostConfigureOptions<CustomSettings>, CustomSettingsPostConfigure>();
+                    services.AddSingleton<IPostConfigureOptions<AppSettings>, AppSettingsPostConfigure>();
 
                     services.ConfigureServicesAuthenticator();
                     services.AddNeededServicesIfNotAdded();
@@ -70,7 +63,7 @@ namespace AuthenticatorConnector.Bootstrap
 
             return host;
         }
-
+            
         /// <summary>
         /// Configurates UI for Authentication as Service in App. NOTE: Use last after all UI Services are added.
         /// </summary>
@@ -81,7 +74,9 @@ namespace AuthenticatorConnector.Bootstrap
         public static IServiceCollection ConfigureServicesAuthenticator(this IServiceCollection services, bool ensureNeedServices = true)
         {
             //Add AuthModals
+
             services.AddSingleton<IAuthenticationService, FirebaseAuthenticationService>();
+            services.TryAddSingleton<IPostConfigureOptions<CustomSettings>, CustomSettingsPostConfigure>();
 
             //Ensure needed services
             if (ensureNeedServices)
