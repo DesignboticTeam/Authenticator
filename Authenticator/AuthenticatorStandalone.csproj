@@ -34,7 +34,7 @@
 	
 	<ItemGroup>
 	  <ProjectReference Include="..\..\Connector\UserSettingsUtility\UserSettingsUtility.csproj" />
-	  <ProjectReference Include="..\Authenticator.UI_WPF\Authenticator.UI_WPF.csproj" />
+	  <ProjectReference Include="..\Authenticator.UI_WPF\AuthenticatorWPFLibrary.csproj" />
 	</ItemGroup>
 	
 	<Import Project="..\AuthenticatorConnector\AuthenticatorConnector.projitems" Label="Shared" />

@@ -81,6 +81,7 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AuthenticatorConnector\AuthenticatorConnector.projitems*{7177769d-db4a-4408-b262-1facac6cfae1}*SharedItemsImports = 13
+		AuthenticatorConnector\AuthenticatorConnector.projitems*{c9ea79de-f6ac-4772-97fc-86e816e441de}*SharedItemsImports = 5
 		AuthenticatorConnector\AuthenticatorConnector.projitems*{f2895683-de48-4cf9-8ead-21d8dac58ef8}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
