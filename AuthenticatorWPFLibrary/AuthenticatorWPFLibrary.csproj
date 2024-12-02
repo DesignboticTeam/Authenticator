@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	  <TargetFrameworks>net472; net8.0-windows</TargetFrameworks>
-	  <Version>0.9.0</Version>
+	  <Version>0.9.1.1</Version>
 
 	  <ImplicitUsings>enable</ImplicitUsings>
 	  <LangVersion>12</LangVersion>
@@ -22,10 +22,14 @@
 	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
 		<DebugType>full</DebugType>
 	</PropertyGroup>
-	<ItemGroup>
-    <ProjectReference Include="..\Authenticator.UI_WPF\Authenticator.UI_WPF.csproj" />
-  </ItemGroup>
 
   <Import Project="..\AuthenticatorConnector\AuthenticatorConnector.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <ProjectReference Include="..\Authenticator.UI_WPF\Authenticator.UI_WPF.csproj"  PrivateAssets="All" >
+
+	</ProjectReference>
+
+</ItemGroup>
 
 </Project>

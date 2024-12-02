@@ -2,6 +2,8 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net472; net8.0-windows</TargetFrameworks>
+		<Version>0.9.1.3</Version>
+
 		<ImplicitUsings>enable</ImplicitUsings>
 		<LangVersion>12</LangVersion>
 		<Configurations>Debug;Release</Configurations>
@@ -60,5 +62,7 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>
+
+  <Import Project="..\AuthenticatorConnector\AuthenticatorConnector.projitems" Label="Shared" />
 
 </Project>

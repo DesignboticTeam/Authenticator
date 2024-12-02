@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authenticator.UI_WPF", "Authenticator.UI_WPF\Authenticator.UI_WPF.csproj", "{F2895683-DE48-4CF9-8EAD-21D8DAC58EF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticatorWPFLibrary", "Authenticator.UI_WPF\AuthenticatorWPFLibrary.csproj", "{F2895683-DE48-4CF9-8EAD-21D8DAC58EF8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{A98DAE47-322E-4037-934A-3133F433FDDB}"
 EndProject
@@ -80,8 +80,7 @@ Global
 		SolutionGuid = {407B9CF9-9D94-446E-BF80-AB19B0F4438C}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		AuthenticatorConnector\AuthenticatorConnector.projitems*{0b482cae-f6d9-4560-a795-a90a0d900403}*SharedItemsImports = 5
 		AuthenticatorConnector\AuthenticatorConnector.projitems*{7177769d-db4a-4408-b262-1facac6cfae1}*SharedItemsImports = 13
-		AuthenticatorConnector\AuthenticatorConnector.projitems*{c9ea79de-f6ac-4772-97fc-86e816e441de}*SharedItemsImports = 5
+		AuthenticatorConnector\AuthenticatorConnector.projitems*{f2895683-de48-4cf9-8ead-21d8dac58ef8}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

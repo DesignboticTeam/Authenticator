@@ -34,6 +34,7 @@
 	
 	<ItemGroup>
 	  <ProjectReference Include="..\..\Connector\UserSettingsUtility\UserSettingsUtility.csproj" />
+	  <ProjectReference Include="..\Authenticator.UI_WPF\Authenticator.UI_WPF.csproj" />
 	</ItemGroup>
 	
 	<Import Project="..\AuthenticatorConnector\AuthenticatorConnector.projitems" Label="Shared" />
@@ -78,12 +79,7 @@
 
 
 
-<Delete Files="&#xD;&#xA;				
-			$(TargetDir)UserSettingsUtility.exe;&#xD;&#xA;				
-			$(TargetDir)UserSettingsUtility.dll;&#xD;&#xA;				
-			$(TargetDir)UserSettingsUtility.deps.json;&#xD;&#xA;				
-			$(TargetDir)UserSettingsUtility.pdb;&#xD;&#xA;				
-			$(TargetDir)UserSettingsUtility.runtimeconfig.json;&#xD;&#xA;" />
+<Delete Files="&#xD;&#xA;				&#xD;&#xA;			$(TargetDir)UserSettingsUtility.exe;&#xD;&#xA;				&#xD;&#xA;			$(TargetDir)UserSettingsUtility.dll;&#xD;&#xA;				&#xD;&#xA;			$(TargetDir)UserSettingsUtility.deps.json;&#xD;&#xA;				&#xD;&#xA;			$(TargetDir)UserSettingsUtility.pdb;&#xD;&#xA;				&#xD;&#xA;			$(TargetDir)UserSettingsUtility.runtimeconfig.json;&#xD;&#xA;" />
 
 		<!-- Delete the plain appsettings.json from the output directory 
 		<Delete Files="$(OutDir)appsettings.json" />

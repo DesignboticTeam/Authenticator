@@ -170,7 +170,7 @@
     <value>Don't have an account yet?</value>
   </data>
   <data name="ModalLogin_SubTitle" xml:space="preserve">
-    <value>Sing in to your account</value>
+    <value>Sing in to your designbotic account</value>
   </data>
   <data name="ModalLogin_Text1" xml:space="preserve">
     <value>or</value>
