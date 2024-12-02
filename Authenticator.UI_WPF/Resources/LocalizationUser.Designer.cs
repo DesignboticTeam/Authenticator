@@ -178,7 +178,7 @@ namespace AuthenticatorWPFLibrary.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sing in to your account.
+        ///   Looks up a localized string similar to Sing in to your designbotic account.
         /// </summary>
         public static string ModalLogin_SubTitle {
             get {
